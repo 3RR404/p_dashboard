@@ -1,7 +1,11 @@
+// hooks
+// # FONT Family
+$mainFont: '"Proxima Nova", Georgia, sans-serif';
+
 // basic
-body,html{margin:0;padding:0}
+body,html{margin:0;padding:0;height:100%;}
 body{
-	height: 100%;
+	font-family: $mainFont
 }
 #window {
 	display: block;
