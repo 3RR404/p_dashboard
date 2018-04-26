@@ -39,6 +39,278 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"\/assets\/fonts\/proxima-nova\/fonts.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/assets\/fonts\/proxima-nova\/fonts-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"\/assets\/fonts\/proxima-nova\/fonts.min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/assets\/fonts\/proxima-nova\/fonts.min-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"\/assets\/fonts\/proxima-nova\/Mark Simonson - Proxima Nova Alt Black-demo.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/assets\/fonts\/proxima-nova\/Mark Simonson - Proxima Nova Alt Black-demo.html",
+		"oF": 0
+		},
+	"\/assets\/fonts\/proxima-nova\/Mark Simonson - Proxima Nova Alt Black-webfont.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/assets\/fonts\/proxima-nova\/Mark Simonson - Proxima Nova Alt Black-webfont.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/assets\/fonts\/proxima-nova\/Mark Simonson - Proxima Nova Alt Black-webfont.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/assets\/fonts\/proxima-nova\/Mark Simonson - Proxima Nova Alt Black-webfont.ttf",
+		"oF": 0
+		},
+	"\/assets\/fonts\/proxima-nova\/Mark Simonson - Proxima Nova Alt Black-webfont.woff": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/assets\/fonts\/proxima-nova\/Mark Simonson - Proxima Nova Alt Black-webfont.woff",
+		"oF": 0
+		},
+	"\/assets\/fonts\/proxima-nova\/Mark Simonson - Proxima Nova Alt Black-webfont.woff2": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/assets\/fonts\/proxima-nova\/Mark Simonson - Proxima Nova Alt Black-webfont.woff2",
+		"oF": 0
+		},
+	"\/assets\/fonts\/proxima-nova\/Mark Simonson - Proxima Nova Alt Bold-demo.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/assets\/fonts\/proxima-nova\/Mark Simonson - Proxima Nova Alt Bold-demo.html",
+		"oF": 0
+		},
+	"\/assets\/fonts\/proxima-nova\/Mark Simonson - Proxima Nova Alt Bold-webfont.eot": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/assets\/fonts\/proxima-nova\/Mark Simonson - Proxima Nova Alt Bold-webfont.eot",
+		"oF": 0
+		},
+	"\/assets\/fonts\/proxima-nova\/Mark Simonson - Proxima Nova Alt Bold-webfont.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/assets\/fonts\/proxima-nova\/Mark Simonson - Proxima Nova Alt Bold-webfont.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/assets\/fonts\/proxima-nova\/Mark Simonson - Proxima Nova Alt Bold-webfont.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/assets\/fonts\/proxima-nova\/Mark Simonson - Proxima Nova Alt Bold-webfont.ttf",
+		"oF": 0
+		},
+	"\/assets\/fonts\/proxima-nova\/Mark Simonson - Proxima Nova Alt Bold-webfont.woff": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/assets\/fonts\/proxima-nova\/Mark Simonson - Proxima Nova Alt Bold-webfont.woff",
+		"oF": 0
+		},
+	"\/assets\/fonts\/proxima-nova\/Mark Simonson - Proxima Nova Alt Bold-webfont.woff2": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/assets\/fonts\/proxima-nova\/Mark Simonson - Proxima Nova Alt Bold-webfont.woff2",
+		"oF": 0
+		},
+	"\/assets\/fonts\/proxima-nova\/Mark Simonson - Proxima Nova Alt Condensed Semibold-demo.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/assets\/fonts\/proxima-nova\/Mark Simonson - Proxima Nova Alt Condensed Semibold-demo.html",
+		"oF": 0
+		},
+	"\/assets\/fonts\/proxima-nova\/Mark Simonson - Proxima Nova Alt Condensed Semibold-webfont.eot": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/assets\/fonts\/proxima-nova\/Mark Simonson - Proxima Nova Alt Condensed Semibold-webfont.eot",
+		"oF": 0
+		},
+	"\/assets\/fonts\/proxima-nova\/Mark Simonson - Proxima Nova Alt Condensed Semibold-webfont.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/assets\/fonts\/proxima-nova\/Mark Simonson - Proxima Nova Alt Condensed Semibold-webfont.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/assets\/fonts\/proxima-nova\/Mark Simonson - Proxima Nova Alt Condensed Semibold-webfont.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/assets\/fonts\/proxima-nova\/Mark Simonson - Proxima Nova Alt Condensed Semibold-webfont.ttf",
+		"oF": 0
+		},
+	"\/assets\/fonts\/proxima-nova\/Mark Simonson - Proxima Nova Alt Regular-demo.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/assets\/fonts\/proxima-nova\/Mark Simonson - Proxima Nova Alt Regular-demo.html",
+		"oF": 0
+		},
+	"\/assets\/fonts\/proxima-nova\/Mark Simonson - Proxima Nova Alt Regular-webfont.eot": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/assets\/fonts\/proxima-nova\/Mark Simonson - Proxima Nova Alt Regular-webfont.eot",
+		"oF": 0
+		},
+	"\/assets\/fonts\/proxima-nova\/Mark Simonson - Proxima Nova Alt Regular-webfont.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/assets\/fonts\/proxima-nova\/Mark Simonson - Proxima Nova Alt Regular-webfont.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/assets\/fonts\/proxima-nova\/Mark Simonson - Proxima Nova Alt Regular-webfont.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/assets\/fonts\/proxima-nova\/Mark Simonson - Proxima Nova Alt Regular-webfont.ttf",
+		"oF": 0
+		},
+	"\/assets\/fonts\/proxima-nova\/Mark Simonson - Proxima Nova Alt Regular-webfont.woff": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/assets\/fonts\/proxima-nova\/Mark Simonson - Proxima Nova Alt Regular-webfont.woff",
+		"oF": 0
+		},
+	"\/assets\/fonts\/proxima-nova\/Mark Simonson - Proxima Nova ScOsf Thin-webfont.eot": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/assets\/fonts\/proxima-nova\/Mark Simonson - Proxima Nova ScOsf Thin-webfont.eot",
+		"oF": 0
+		},
+	"\/assets\/fonts\/proxima-nova\/Mark Simonson - Proxima Nova ScOsf Thin-webfont.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/assets\/fonts\/proxima-nova\/Mark Simonson - Proxima Nova ScOsf Thin-webfont.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/assets\/fonts\/proxima-nova\/Mark Simonson - Proxima Nova ScOsf Thin-webfont.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/assets\/fonts\/proxima-nova\/Mark Simonson - Proxima Nova ScOsf Thin-webfont.ttf",
+		"oF": 0
+		},
+	"\/assets\/fonts\/proxima-nova\/Mark Simonson - Proxima Nova ScOsf Thin-webfont.woff": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/assets\/fonts\/proxima-nova\/Mark Simonson - Proxima Nova ScOsf Thin-webfont.woff",
+		"oF": 0
+		},
+	"\/assets\/fonts\/proxima-nova\/Mark Simonson - Proxima Nova Semibold-webfont.eot": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/assets\/fonts\/proxima-nova\/Mark Simonson - Proxima Nova Semibold-webfont.eot",
+		"oF": 0
+		},
+	"\/assets\/fonts\/proxima-nova\/Mark Simonson - Proxima Nova Semibold-webfont.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/assets\/fonts\/proxima-nova\/Mark Simonson - Proxima Nova Semibold-webfont.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/assets\/fonts\/proxima-nova\/Mark Simonson - Proxima Nova Semibold-webfont.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/assets\/fonts\/proxima-nova\/Mark Simonson - Proxima Nova Semibold-webfont.ttf",
+		"oF": 0
+		},
+	"\/assets\/fonts\/proxima-nova\/Mark Simonson - Proxima Nova Semibold-webfont.woff2": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/assets\/fonts\/proxima-nova\/Mark Simonson - Proxima Nova Semibold-webfont.woff2",
+		"oF": 0
+		},
+	"\/assets\/fonts\/proxima-nova\/Mark Simonson - Proxima Nova Thin-webfont.eot": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/assets\/fonts\/proxima-nova\/Mark Simonson - Proxima Nova Thin-webfont.eot",
+		"oF": 0
+		},
+	"\/assets\/fonts\/proxima-nova\/Mark Simonson - Proxima Nova Thin-webfont.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/assets\/fonts\/proxima-nova\/Mark Simonson - Proxima Nova Thin-webfont.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/assets\/fonts\/proxima-nova\/Mark Simonson - Proxima Nova Thin-webfont.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/assets\/fonts\/proxima-nova\/Mark Simonson - Proxima Nova Thin-webfont.ttf",
+		"oF": 0
+		},
+	"\/assets\/fonts\/proxima-nova\/Mark Simonson - Proxima Nova Thin-webfont.woff": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/assets\/fonts\/proxima-nova\/Mark Simonson - Proxima Nova Thin-webfont.woff",
+		"oF": 0
+		},
+	"\/assets\/fonts\/proxima-nova\/Mark Simonson - Proxima Nova Thin-webfont.woff2": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/assets\/fonts\/proxima-nova\/Mark Simonson - Proxima Nova Thin-webfont.woff2",
+		"oF": 0
+		},
 	"\/index.html": {
 		"cB": 0,
 		"ft": 8192,
