@@ -1,18 +1,26 @@
 // hooks
 // # FONT Family
 $mainFont: '"Proxima Nova", Georgia, sans-serif';
+$colorStart: '#4b86c0';
+$colorStop: '#b0c3d4';
 
 // basic
 body,html{margin:0;padding:0;height:100%;}
 body{
-	font-family: $mainFont
+	font-family: $mainFont;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	background:linear-gradient(to bottom, $colorStart , $colorStop);
 }
 #window {
 	display: flex;
 	width: 1133px;
-	height: 100%;
-	margin: 78px auto;
+	height:100%;
+	max-height: 1090px;
+	margin: 0 auto;
 	flex-direction:row;
+	overflow:scroll;
 }
 #left-sidebar{
 	width:200px;
