@@ -8,14 +8,18 @@ body{
 	font-family: $mainFont
 }
 #window {
-	display: block;
+	display: flex;
 	width: 1133px;
 	height: 100%;
 	margin: 78px auto;
+	flex-direction:row;
 }
 #left-sidebar{
 	width:200px;
 	height: 100%;
+	display:flex;
+	flex:0;
+	flex-direction:column;
 	.sidebar-header {
 		height: 95px;
 		display: flex;
@@ -29,4 +33,12 @@ body{
 			list-style: none;
 		}
 	}
+}
+#main {
+	width: 933px;
+	display: flex;
+	flex: 1;
+	justify-content: flex-start;
+	align-items: flex-start;
+	flex-direction: column;
 }
