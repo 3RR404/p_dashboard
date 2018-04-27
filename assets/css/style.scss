@@ -1,6 +1,6 @@
 // hooks
 // # FONT Family
-$mainFont: '"Proxima Nova", Georgia, sans-serif';
+$mainFont: 'Proxima Nova', Georgia, sans-serif;
 $colorStart: #4b86c0;
 $colorStop: #b0c3d4;
 
@@ -12,6 +12,7 @@ body{
 	justify-content:center;
 	align-items:center;
 	background:linear-gradient(to bottom, $colorStart , $colorStop);
+	padding: 5% 0;
 }
 #window {
 	display: flex;
