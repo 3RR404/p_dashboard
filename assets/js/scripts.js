@@ -6,8 +6,7 @@
 
 		  var magicLine = $('div.magic-line');
 
-		  magicLine.width($(".current").width())
-			        .css("left", $("a.active").position().left)
+		  magicLine.width($(".current").width()).css("left", $("a.active").position().left)
 			        .data("origLeft", magicLine.position().left)
 			        .data("origWidth", magicLine.width());
 
