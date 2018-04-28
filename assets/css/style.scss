@@ -21,8 +21,22 @@ $navLine: #27ae60;
 // header navbar border colors
 $hLine: #d4d8d8;
 
+// tables in the main content
+$borders: 1px solid #dee1e2;
+	// tables section colors
+	$sCourse:#e67333;
+	$sQuest:#8e44ad;
+	$sExam:#16a085;
+
+// table h1
+$h1_ff: 'proxima_nova_altbold', Georgia, sans-serif;
+$h1_size: 34px;
+// table subtitle
+$subtitle_size: 12px;
+
 // import fonts
 @import 'dashboard.css';
+@import '../fonts/proxima-nova/fonts.css';
 
 // basic
 body,html{margin:0;padding:0;height:100%;}
@@ -38,16 +52,12 @@ img{
 	max-width:100%;
 	max-height:100%;
 }
-.container-fluid{
-	padding-left:24px;
-	padding-right:24px;
-}
 .navbar{
 	padding:0!important;
 }
 #window {
 	display: flex;
-	width: 1133px;
+	width: 1333px;
 	height:100%;
 	max-height: 1090px;
 	margin: 0 auto;
@@ -66,6 +76,14 @@ img{
 				display:inline-block;
 			}
 	}
+	> .container-fluid{
+		padding-left:24px;
+		padding-right:24px;
+	}
+	> .row{
+		margin-left:-24px;
+		margin-right:-24px;
+	}
 	.main-logo{
 		display:flex;
 		justify-content:center;
@@ -83,6 +101,14 @@ img{
 	background: #fff;
 	width: 100%;
 	border-bottom:1px solid $hLine;
+	> .container-fluid{
+		padding-left:45px;
+		padding-right:45px;
+	}
+	> .row{
+		margin-left:-45px;
+		margin-right:-45px;
+	}
 }
 #left-sidebar{
 	width:200px;
@@ -194,13 +220,83 @@ img{
 		box-sizing:border-box;
 		overflow-y: scroll;
 		padding: 38px 0;
+		> .container-fluid{
+			padding-left:45px;
+			padding-right:45px;
+		}
+		> .row{
+			margin-left:-45px;
+			margin-right:-45px;
+		}
+		[id*="table-"]{
+			.table-head{
+				background:white;
+				border-top: $borders;
+				border-left:$borders;
+				border-right:$borders;
+				padding:0;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				.course,[class*="course"]{
+					color:$sCourse;
+				}
+				.questions,[class*="questions"]{
+					color:$sQuest;
+				}
+				.exam,[class*="exam"]{
+					color:$sExam;
+				}
+				&:nth-child(2){
+					border:0;
+					background:$mainBg;
+					border-bottom: $borders;
+					.course,[class*="course"]{
+						color:$sideNavC;
+					}
+					.questions,[class*="questions"]{
+						color:$sideNavC;
+					}
+					.exam,[class*="exam"]{
+						color:$sideNavC;
+					}
+				}
+			}
+			.table-body{
+				background:#fff;
+				border-left:$borders;
+				border-right:$borders;
+				width:100%;
+			}
+			.table-footer{
+				background:#fff;
+				border-bottom: $borders;
+				border-left:$borders;
+				border-right:$borders;
+				width:100%;
+			}
+			h1{
+				font-family:$h1_ff;
+				font-size:$h1_size;
+			}
+			[class*="sub-"]{
+				font-size:$subtitle_size;
+				text-transform:uppercase;
+				text-overflow: clip;
+				white-space: nowrap;
+			}
+		}
 		.table-row{
 			display: -ms-flexbox;
 			display: flex;
 			-ms-flex-wrap: wrap;
 			flex-wrap: wrap;
-			margin-right: -15px;
-			margin-left: -15px;
+			margin-right: 0;
+			margin-left: 0;
+			&:nth-child(2) {
+				flex: 1;
+			}
 		}
 	}
 	#user-bar-header{

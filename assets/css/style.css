@@ -1,4 +1,5 @@
 @import url(dashboard.css);
+@import url(../fonts/proxima-nova/fonts.css);
 body, html {
   margin: 0;
   padding: 0;
@@ -23,10 +24,6 @@ img {
   max-width: 100%;
   max-height: 100%; }
 
-.container-fluid {
-  padding-left: 24px;
-  padding-right: 24px; }
-
 .navbar {
   padding: 0 !important; }
 
@@ -34,7 +31,7 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 1133px;
+  width: 1333px;
   height: 100%;
   max-height: 1090px;
   margin: 0 auto;
@@ -52,6 +49,12 @@ img {
   padding: 23px 0; }
   #header .search-bar input, #header .search-bar button {
     display: inline-block; }
+  #header > .container-fluid {
+    padding-left: 24px;
+    padding-right: 24px; }
+  #header > .row {
+    margin-left: -24px;
+    margin-right: -24px; }
   #header .main-logo, #header .search-bar, #header .user-bar {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -73,6 +76,12 @@ img {
   background: #fff;
   width: 100%;
   border-bottom: 1px solid #d4d8d8; }
+  #user-bar-header > .container-fluid {
+    padding-left: 45px;
+    padding-right: 45px; }
+  #user-bar-header > .row {
+    margin-left: -45px;
+    margin-right: -45px; }
 
 #left-sidebar {
   width: 200px;
@@ -192,14 +201,78 @@ img {
             box-sizing: border-box;
     overflow-y: scroll;
     padding: 38px 0; }
+    #main #main-content > .container-fluid {
+      padding-left: 45px;
+      padding-right: 45px; }
+    #main #main-content > .row {
+      margin-left: -45px;
+      margin-right: -45px; }
+    #main #main-content [id*="table-"] .table-head {
+      background: white;
+      border-top: 1px solid #dee1e2;
+      border-left: 1px solid #dee1e2;
+      border-right: 1px solid #dee1e2;
+      padding: 0;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      #main #main-content [id*="table-"] .table-head .course, #main #main-content [id*="table-"] .table-head [class*="course"] {
+        color: #e67333; }
+      #main #main-content [id*="table-"] .table-head .questions, #main #main-content [id*="table-"] .table-head [class*="questions"] {
+        color: #8e44ad; }
+      #main #main-content [id*="table-"] .table-head .exam, #main #main-content [id*="table-"] .table-head [class*="exam"] {
+        color: #16a085; }
+      #main #main-content [id*="table-"] .table-head:nth-child(2) {
+        border: 0;
+        background: #ecf0f1;
+        border-bottom: 1px solid #dee1e2; }
+        #main #main-content [id*="table-"] .table-head:nth-child(2) .course, #main #main-content [id*="table-"] .table-head:nth-child(2) [class*="course"] {
+          color: #95a5a6; }
+        #main #main-content [id*="table-"] .table-head:nth-child(2) .questions, #main #main-content [id*="table-"] .table-head:nth-child(2) [class*="questions"] {
+          color: #95a5a6; }
+        #main #main-content [id*="table-"] .table-head:nth-child(2) .exam, #main #main-content [id*="table-"] .table-head:nth-child(2) [class*="exam"] {
+          color: #95a5a6; }
+    #main #main-content [id*="table-"] .table-body {
+      background: #fff;
+      border-left: 1px solid #dee1e2;
+      border-right: 1px solid #dee1e2;
+      width: 100%; }
+    #main #main-content [id*="table-"] .table-footer {
+      background: #fff;
+      border-bottom: 1px solid #dee1e2;
+      border-left: 1px solid #dee1e2;
+      border-right: 1px solid #dee1e2;
+      width: 100%; }
+    #main #main-content [id*="table-"] h1 {
+      font-family: "proxima_nova_altbold", Georgia, sans-serif;
+      font-size: 34px; }
+    #main #main-content [id*="table-"] [class*="sub-"] {
+      font-size: 12px;
+      text-transform: uppercase;
+      text-overflow: clip;
+      white-space: nowrap; }
     #main #main-content .table-row {
       display: -ms-flexbox;
       display: -webkit-box;
       display: flex;
       -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-      margin-right: -15px;
-      margin-left: -15px; }
+      margin-right: 0;
+      margin-left: 0; }
+      #main #main-content .table-row:nth-child(2) {
+        -webkit-box-flex: 1;
+            -ms-flex: 1;
+                flex: 1; }
   #main #user-bar-header {
     padding: 19px 0 0 0; }
   #main #main-content-nav .nav-link {
