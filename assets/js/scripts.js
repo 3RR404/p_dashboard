@@ -6,9 +6,7 @@
 
 		  var magicLine = $('div.magic-line');
 
-		  magicLine.width($(".current").width()).css("left", $("a.active").position().left)
-			        .data("origLeft", magicLine.position().left)
-			        .data("origWidth", magicLine.width());
+		  magicLine.width($(".current").width()).css("left", $("a.active").position().left).data("origLeft", magicLine.position().left).data("origWidth", magicLine.width());
 
 		  $(".navbar-white li a").hover(function() {
 			        var el = $(this);
