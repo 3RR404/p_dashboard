@@ -26,10 +26,14 @@
 			            width: magicLine.data("origWidth")
 			        });
 			    });
-
+				
+	// Remove Anchors
 	$( 'a[href="#"]' ).on( 'click', function( e ){
 		e.preventDefault();
 	});
+
+	// Add tooltips Script
+	$('[data-toggle="tooltip"]').tooltip();
 
 	});//if document is ready (is loaded)
 

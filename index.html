@@ -16,6 +16,7 @@
 	<!-- Bootstrap 4 JS basic and bundle -->
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.bundle.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
 	<script src="assets/js/scripts.js" type="text/javascript" defer></script>
 </head>
 
@@ -31,31 +32,31 @@
 			<nav id="sidebar-nav" class="navbar navbar-dark">
 				<ul class="nav nav-pills nav-justified nav-items">
 					<li class="nav-item item first-item current">
-						<a href="#dashboard" title="Dashboard" class="nav-link active">
+						<a href="#dashboard" title="Dashboard" data-toggle="tooltip" data-placement="right" class="nav-link active">
 							<i class="da da-dashboard"></i>
 							Dashboard
 						</a>
 					</li>
 					<li class="nav-item item">
-						<a href="#course" title="Course" class="nav-link">
+						<a href="#course" title="Course" data-toggle="tooltip" data-placement="right" class="nav-link">
 							<i class="da da-course"></i>
 							Course
 						</a>
 					</li>
 					<li class="nav-item item">
-						<a href="#exam" title="Exam" class="nav-link">
+						<a href="#exam" title="Exam" data-toggle="tooltip" data-placement="right" class="nav-link">
 							<i class="da da-exam"></i>
 							Exam
 						</a>
 					</li>
 					<li class="nav-item item">
-						<a href="#qanda" title="Q&amp;A" class="nav-link">
+						<a href="#qanda" title="Q&amp;A" data-toggle="tooltip" data-placement="right" class="nav-link">
 							<i class="da da-chat-double-bouble"></i>
 							Q&amp;A
 						</a>
 					</li>
 					<li class="nav-item item">
-						<a href="#news" title="News" class="nav-link">
+						<a href="#news" title="News" data-toggle="tooltip" data-placement="right" class="nav-link">
 							<i class="da da-news"></i>
 							News
 						</a>
@@ -93,9 +94,9 @@
 							<img src="assets/images/user_avatar.png" alt="User avatar" class="avatar" />
 						</div>
 
-						<div class="user-info col-lg-6 col-md-6 col-sm-12">
+						<div class="user-info col-lg-8 col-md-8 col-sm-12">
 							<div class="user-info-head">
-								<h4 class="user-name" title="HOANG NGUYEN">HOANG NGUYEN</h4>
+								<h4 class="user-name" data-toggle="tooltip" data-placement="top" title="HOANG NGUYEN">HOANG NGUYEN</h4>
 								<div class="user-rating">
 									<i class="da da-star"></i>
 									<i class="da da-star"></i>
@@ -108,7 +109,7 @@
 								<div class="student text-gray">Student</div>
 								&middot;
 								<div class="about-depart">
-									<a href="#learn-more" class="b-link" title="Learn more">Learn more</a>
+									<a href="#learn-more" data-toggle="tooltip" data-placement="top" class="b-link" title="Learn more">Learn more</a>
 								</div>
 							</div>
 							<div class="user-exp">
@@ -116,9 +117,9 @@
 							</div>
 						</div>
 
-						<div class="user-actions col-lg-4 col-md-4 col-sm-6">
-							<a href="#edit" class="edit" title="Edit"><span>Edit</span><i class="da da-pencil"></i></a>
-							<a href="#log-out" class="logout" title="Log out"><span>Log out</span><i class="da da-exit"></i></a>
+						<div class="user-actions col-lg-2 col-md-2 col-sm-6">
+							<a href="#edit" data-toggle="tooltip" data-placement="top" class="edit" title="Edit"><i class="da da-pencil"></i></a>
+							<a href="#log-out" data-toggle="tooltip" data-placement="top" class="logout" title="Log out"><i class="da da-exit"></i></a>
 						</div>
 					</div>
 
@@ -189,9 +190,11 @@
 										<div class="before-content"></div>
 										<div class="content">How To Speed Up Your WordPress Website</div>
 									</div>
+									<div id="collapse-course" class="collapse">
+									</div>
 								</div>
 								<div class="table-footer">
-									<a href="#collapse-course">Show more <i class="da da-double-arrow-down"></i></a>
+									<a href="#collapse-course" data-toggle="collapse">Show more <i class="da da-double-arrow-down"></i></a>
 								</div>
 							</div>
 						</div><!--/#table-1-->
@@ -215,19 +218,21 @@
 									</div>
 									<div class="tb-row">
 										<div class="before-content"><i class="da da-comment-buble"></i><span class="badge">3</span></div>
-										<div class="content">What are the best mobile apps for</div>
+										<div class="content">What are the best mobile apps for programming web sites?</div>
 									</div>
 									<div class="tb-row">
 										<div class="before-content"><i class="da da-comment-buble"></i><span class="badge">67</span></div>
-										<div class="content">What's the difference between UI and</div>
+										<div class="content">What's the difference between UI and UX design?</div>
 									</div>
 									<div class="tb-row">
 										<div class="before-content"><i class="da da-comment-buble"></i><span class="badge">0</span></div>
-										<div class="content">What logos include hidden messages</div>
+										<div class="content">What logos include hidden messages in their design?</div>
+									</div>
+									<div id="collapse-questions" class="collapse">
 									</div>
 								</div>
 								<div class="table-footer">
-									<a href="#collapse-questions">Show more <i class="da da-double-arrow-down"></i></a>
+									<a href="#collapse-questions" data-toggle="collapse">Show more <i class="da da-double-arrow-down"></i></a>
 								</div>
 							</div>
 						</div><!--/#table-2-->
@@ -251,19 +256,29 @@
 									</div>
 									<div class="tb-row">
 										<div class="before-content"></div>
-										<div class="content">Which is the best way to pass the PMP</div>
+										<div class="content">Which is the best way to pass the PMP exam? Self-learning? Any specific book or training besides the PMBook?</div>
 									</div>
 									<div class="tb-row">
 										<div class="before-content"></div>
-										<div class="content">What are great examples of viral UX/UI</div>
+										<div class="content">What are great examples of viral UX/UI design patterns?</div>
 									</div>
 									<div class="tb-row">
 										<div class="before-content"></div>
 										<div class="content">Why is consistency important in design?</div>
 									</div>
+									<div id="collapse-exam" class="collapse">
+										<div class="tb-row">
+											<div class="before-content"></div>
+											<div class="content">What are great examples of viral UX/UI design patterns?</div>
+										</div>
+										<div class="tb-row">
+											<div class="before-content"></div>
+											<div class="content">Why is consistency important in design?</div>
+										</div>
+									</div>
 								</div>
 								<div class="table-footer">
-									<a href="#collapse-exam">Show more <i class="da da-double-arrow-down"></i></a>
+									<a href="#collapse-exam" data-toggle="collapse">Show more <i class="da da-double-arrow-down"></i></a>
 								</div>
 							</div>
 						</div><!--/#table-3-->

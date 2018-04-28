@@ -4,6 +4,8 @@ $mainFont: 'Proxima Nova', Georgia, sans-serif;
 
 // # font sizes
 $sidebarNav: 14px;
+$mainNav: 14px;
+$tb_footer: 12px;
 
 // # font colors
 $sideNavC: #95a5a6;
@@ -33,6 +35,9 @@ $h1_ff: 'proxima_nova_altbold', Georgia, sans-serif;
 $h1_size: 34px;
 // table subtitle
 $subtitle_size: 12px;
+// table text
+$tb_row: 13px;
+$tb_row_color:#7f8c8d;
 
 // import fonts
 @import 'dashboard.css';
@@ -51,6 +56,11 @@ body{
 img{
 	max-width:100%;
 	max-height:100%;
+}
+a,button,input[type="submit"],.submit,#submit,.link{
+	&:hover{
+		cursor:pointer;
+	}
 }
 .navbar{
 	padding:0!important;
@@ -79,10 +89,10 @@ img{
 	> .container-fluid{
 		padding-left:24px;
 		padding-right:24px;
-	}
-	> .row{
-		margin-left:-24px;
-		margin-right:-24px;
+		> .row{
+			margin-left:0px;
+			margin-right:0px;
+		}
 	}
 	.main-logo{
 		display:flex;
@@ -104,10 +114,10 @@ img{
 	> .container-fluid{
 		padding-left:45px;
 		padding-right:45px;
-	}
-	> .row{
-		margin-left:-45px;
-		margin-right:-45px;
+		> .row{
+			margin-left:0px;
+			margin-right:0px;
+		}
 	}
 }
 #left-sidebar{
@@ -169,9 +179,22 @@ img{
 .da{
 	display:inline-block;
 	&:before{
-		color: $sideNavC;
-		font-size: 16px;
-		line-height: 1.45em;
+		color: inherit;
+		font-size: inherit;
+		line-height: inherit;
+		text-decoration:inherit;
+		font-style:normal;
+		font-weight:100;
+	}
+}
+*:hover{
+	.da:before{
+		color: inherit;
+		font-size: inherit;
+		line-height: inherit;
+		text-decoration:inherit;
+		font-style:normal;
+		font-weight:100;
 	}
 }
 .navbar-white{
@@ -213,6 +236,24 @@ img{
 	background:$mainBg;
 	.user-depart > div {
 		display: inline-block;
+	}
+	.user-actions{
+		display: flex;
+		justify-content: flex-end;
+		align-items: flex-start;
+		flex: 1;
+		> a{
+			padding: 7px 12px;
+			border: 1px solid #cdd1d7;
+			border-radius: 50%;
+			line-height: 1.45em;
+			display: inline-table;
+			margin-left: 13px;
+			margin-top: 27px;
+			i{
+				color:#9ba3af;
+			}
+		}
 	}
 	#main-content{
 		width:100%;
@@ -275,6 +316,9 @@ img{
 				border-left:$borders;
 				border-right:$borders;
 				width:100%;
+				font-size:$tb_footer;
+				padding: 7px 25px;
+				text-align: right;
 			}
 			h1{
 				font-family:$h1_ff;
@@ -298,6 +342,23 @@ img{
 				flex: 1;
 			}
 		}
+		#table-2{
+			.before-content{
+				min-width:35px;
+			}
+		}
+		.tb-row{
+			font-size:$tb_row;
+			color:$tb_row_color;
+			padding: 18px 25px;
+			border-bottom: $borders;
+			display:flex;
+			.content{
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+			}
+		}
 	}
 	#user-bar-header{
 		padding:19px 0 0 0;
@@ -305,6 +366,9 @@ img{
 	#main-content-nav{
 		.nav-link{
 			padding:0!important;
+			font-size: $mainNav;
+			font-weight: 900;
+			text-transform: uppercase;
 		}
 		.nav-item{
 			padding-right:49px;
