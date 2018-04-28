@@ -362,6 +362,16 @@
 		"oAP": "\/assets\/fonts\/proxima-nova\/Mark Simonson - Proxima Nova Thin-webfont.woff2",
 		"oF": 0
 		},
+	"\/assets\/images\/avatar.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/assets\/images\/avatar.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
 	"\/assets\/images\/bell_ico.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -432,6 +442,16 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
+	"\/assets\/images\/mainLogo.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/assets\/images\/mainLogo.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
 	"\/assets\/images\/news_ico.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -491,6 +511,16 @@
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
+		},
+	"\/assets\/js\/scripts-min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/assets\/js\/scripts-min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
 		},
 	"\/assets\/js\/scripts.js": {
 		"ft": 64,

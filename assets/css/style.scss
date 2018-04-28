@@ -16,6 +16,7 @@ $colorStop: #b0c3d4;
 $logoBg: #2ecc71;
 $mainBg: #ecf0f1;
 $sidebarBg: #34495e;
+$navLine: #27ae60;
 
 // import fonts
 @import 'dashboard.css';
@@ -29,6 +30,14 @@ body{
 	align-items:center;
 	background:linear-gradient(to bottom, $colorStart , $colorStop);
 	padding: 5% 0;
+}
+img{
+	max-width:100%;
+	max-height:100%;
+}
+.container-fluid{
+	padding-left:24px;
+	padding-right:24px;
 }
 #window {
 	display: flex;
@@ -44,6 +53,25 @@ body{
 	width:100%;
 	background: #fff;
 	border-bottom: 1px solid #e5e5e5;
+	padding:23px 0;
+	.search-bar{
+		@extend .main-logo;
+		input, button{
+				display:inline-block;
+			}
+	}
+	.main-logo{
+		display:flex;
+		justify-content:center;
+		align-items:center;
+	}
+	.user-bar{
+		@extend .main-logo;
+		justify-content:flex-start;
+		.da{
+			margin-right:31px;
+		}
+	}
 }
 #user-bar-header {
 	background: #fff;
@@ -56,12 +84,19 @@ body{
 	flex-direction:column;
 	background: $sidebarBg;
 	.sidebar-header {
-		height: 95px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		width: 100%;
 		background:$logoBg;
+	}
+	.brand-logo{
+		padding:21px 0;
+		.brand-title{
+			font-size:13px;
+			color:white;
+			margin-left:13px;
+		}
 	}
 	#sidebar-nav {
 		padding: 20px 0;
@@ -73,14 +108,25 @@ body{
 				font-family:'proxima_nova_ltsemibold', Georgia, sans-serif;
 				font-size:$sidebarNav;
 				text-transform:uppercase;
+				line-height: 1.45em;
+				display: flex;
+				justify-content: flex-start;
+				align-items: center;
 				&:hover,&.active{
 					color:$sideNavChover;
+				}
+				&:hover i.da:before,
+				&.active i.da:before{
+					color:$logoBg;
+				}
+				.da {
+					margin-right: 26px;
 				}
 			}
 		}
 		.nav-pills{
-			.nav-link.active, .show>.nav-link{
-				background-color:#243342;
+			.nav-link.active,.nav-link:hover{
+				background-color:#243342!important;
 			}
 		}
 	}
@@ -89,6 +135,8 @@ body{
 	display:inline-block;
 	&:before{
 		color: $sideNavC;
+		font-size: 16px;
+		line-height: 1.45em;
 	}
 }
 .navbar-white{
@@ -104,8 +152,11 @@ body{
 			}
 		}
 	}
+	.nav-items{
+		position: relative;
+	}
 }
-.magic-line {
+#magic-line {
 	display:inline;
 	position:absolute;
 	bottom:0;
@@ -115,7 +166,7 @@ body{
 	height:4px;
 	margin:0;
 	padding:0;
-	background:#27ae60;
+	background:$navLine;
 }
 #main {
 	width: 933px;
@@ -124,4 +175,8 @@ body{
 	justify-content: flex-start;
 	align-items: flex-start;
 	flex-direction: column;
+	background:$mainBg;
+	.user-depart > div {
+		display: inline-block;
+	}
 }

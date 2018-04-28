@@ -4,14 +4,18 @@
 
 	jQuery( document ).ready( function( $ ){
 
-		  var magicLine = $('div.magic-line');
+		var el, leftPos, newWidth,
+		  mainNav = $('.navbar-white .nav-items');
 
-		  magicLine.width($(".current").width()).css("left", $("a.active").position().left).data("origLeft", magicLine.position().left).data("origWidth", magicLine.width());
+		  mainNav.append('<li id="magic-line"></li>');
+
+		  var magicLine = $('#magic-line');
+		  magicLine.width($(".nav-items .current").width()).css("left", $(".current a").position().left).data("origLeft", magicLine.position().left).data("origWidth", magicLine.width());
 
 		  $(".navbar-white li a").hover(function() {
-			        var el = $(this);
-			        var leftPos = el.position().left;
-			        var newWidth = el.parent().width();
+			       	el = $(this);
+			        leftPos = el.position().left;
+			        newWidth = el.parent().width();
 			        magicLine.stop().animate({
 			            left: leftPos,
 			            width: newWidth
@@ -22,6 +26,14 @@
 			            width: magicLine.data("origWidth")
 			        });
 			    });
+
+	$( 'a[href="#"]' ).on( 'click', function( e ){
+		e.preventDefault();
+	});
+	if( $( '.navbar a' ).attr('href') != '' || $( '.navbar a' ).attr('href') != '#' ){
+		
+	}
+
 	});//if document is ready (is loaded)
 
 })(window.jQuery);
