@@ -9,6 +9,16 @@
 	],
 "creatorBuild": "26680",
 "files": {
+	"\/assets\/css\/dashboard.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/assets\/css\/dashboard-min.css",
+		"oF": 0,
+		"oS": 3
+		},
 	"\/assets\/css\/style.css": {
 		"aP": 1,
 		"bl": 0,
@@ -38,6 +48,37 @@
 		"oF": 1,
 		"oS": 0,
 		"uL": 1
+		},
+	"\/assets\/fonts\/dashboard\/dashboard.eot": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/assets\/fonts\/dashboard\/dashboard.eot",
+		"oF": 0
+		},
+	"\/assets\/fonts\/dashboard\/dashboard.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/assets\/fonts\/dashboard\/dashboard.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/assets\/fonts\/dashboard\/dashboard.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/assets\/fonts\/dashboard\/dashboard.ttf",
+		"oF": 0
+		},
+	"\/assets\/fonts\/dashboard\/dashboard.woff": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/assets\/fonts\/dashboard\/dashboard.woff",
+		"oF": 0
 		},
 	"\/assets\/fonts\/proxima-nova\/fonts.css": {
 		"aP": 1,
@@ -310,6 +351,136 @@
 		"oA": 0,
 		"oAP": "\/assets\/fonts\/proxima-nova\/Mark Simonson - Proxima Nova Thin-webfont.woff2",
 		"oF": 0
+		},
+	"\/assets\/images\/bell_ico.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/assets\/images\/bell_ico.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/assets\/images\/chat_ico.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/assets\/images\/chat_ico.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/assets\/images\/course_ico.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/assets\/images\/course_ico.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/assets\/images\/dashboard_ico.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/assets\/images\/dashboard_ico.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/assets\/images\/exam_ico.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/assets\/images\/exam_ico.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/assets\/images\/exit_ico.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/assets\/images\/exit_ico.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/assets\/images\/exp_ico.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/assets\/images\/exp_ico.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/assets\/images\/news_ico.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/assets\/images\/news_ico.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/assets\/images\/pencil_ico.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/assets\/images\/pencil_ico.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/assets\/images\/qanda_ico.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/assets\/images\/qanda_ico.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/assets\/images\/search_ico.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/assets\/images\/search_ico.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/assets\/images\/star_ico.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/assets\/images\/star_ico.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/assets\/images\/user_ico.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/assets\/images\/user_ico.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
 		},
 	"\/index.html": {
 		"cB": 0,
