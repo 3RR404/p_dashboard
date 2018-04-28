@@ -4,6 +4,14 @@ $mainFont: 'Proxima Nova', Georgia, sans-serif;
 $colorStart: #4b86c0;
 $colorStop: #b0c3d4;
 
+// # font sizes
+$sidebarNav: 14px;
+
+// # font colors
+$sideNavC: #95a5a6;
+$sideNavChover: #fff;
+
+@import 'dashboard.css';
 // basic
 body,html{margin:0;padding:0;height:100%;}
 body{
@@ -21,13 +29,15 @@ body{
 	max-height: 1090px;
 	margin: 0 auto;
 	flex-direction:row;
-	overflow:scroll;
+	overflow-x: hidden;
+	overflow-y: scroll;
 }
 #left-sidebar{
 	width:200px;
 	height: 100%;
 	display:flex;
 	flex-direction:column;
+	background: #34495e;
 	.sidebar-header {
 		height: 95px;
 		display: flex;
@@ -39,7 +49,30 @@ body{
 		padding: 20px 0;
 		li{
 			list-style: none;
+			width:100%
+			.nav-link{
+				color:$sideNavC;
+				font-family:'proxima_nova_ltsemibold', Georgia, sans-serif;
+				font-size:$sidebarNav;
+				text-transform:uppercase;
+				&:hover,&.active{
+					color:$sideNavChover;
+				}
+			}
 		}
+		.nav-pills{
+			.nav-link.active, .show>.nav-link{
+				background-color:#243342;
+			}
+		}
+	}
+}
+.da{
+	display:inline-block;
+	&:before{
+		content: '';
+		display: block;
+		color: $sideNavC;
 	}
 }
 #main {
