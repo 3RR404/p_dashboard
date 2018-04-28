@@ -18,6 +18,9 @@ $mainBg: #ecf0f1;
 $sidebarBg: #34495e;
 $navLine: #27ae60;
 
+// header navbar border colors
+$hLine: #d4d8d8;
+
 // import fonts
 @import 'dashboard.css';
 
@@ -38,6 +41,9 @@ img{
 .container-fluid{
 	padding-left:24px;
 	padding-right:24px;
+}
+.navbar{
+	padding:0!important;
 }
 #window {
 	display: flex;
@@ -76,6 +82,7 @@ img{
 #user-bar-header {
 	background: #fff;
 	width: 100%;
+	border-bottom:1px solid $hLine;
 }
 #left-sidebar{
 	width:200px;
@@ -112,6 +119,8 @@ img{
 				display: flex;
 				justify-content: flex-start;
 				align-items: center;
+				padding:12px 1rem 13px;
+				margin-top:20px;
 				&:hover,&.active{
 					color:$sideNavChover;
 				}
@@ -178,5 +187,33 @@ img{
 	background:$mainBg;
 	.user-depart > div {
 		display: inline-block;
+	}
+	#main-content{
+		width:100%;
+		display:block;
+		box-sizing:border-box;
+		overflow-y: scroll;
+		padding: 38px 0;
+		.table-row{
+			display: -ms-flexbox;
+			display: flex;
+			-ms-flex-wrap: wrap;
+			flex-wrap: wrap;
+			margin-right: -15px;
+			margin-left: -15px;
+		}
+	}
+	#user-bar-header{
+		padding:19px 0 0 0;
+	}
+	#main-content-nav{
+		.nav-link{
+			padding:0!important;
+		}
+		.nav-item{
+			padding-right:49px;
+			padding-bottom:19px;
+			padding-top:19px;
+		}
 	}
 }

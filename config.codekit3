@@ -502,6 +502,17 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
+	"\/assets\/images\/user_avatar.png": {
+		"ft": 32768,
+		"iS": 17998,
+		"oA": 0,
+		"oAP": "\/assets\/images\/user_avatar.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"\/assets\/images\/user_ico.svg": {
 		"ft": 2097152,
 		"miP": 0,

@@ -10,10 +10,10 @@
 		  mainNav.append('<li id="magic-line"></li>');
 
 		  var magicLine = $('#magic-line');
-		  magicLine.width($(".nav-items .current").width()).css("left", $(".current a").position().left).data("origLeft", magicLine.position().left).data("origWidth", magicLine.width());
+		  magicLine.width($(".nav-items .current a").width()).css("left", $(".current a").position().left).data("origLeft", magicLine.position().left).data("origWidth", magicLine.width());
 
-		  $(".navbar-white li a").hover(function() {
-			       	el = $(this);
+		  $(".navbar-white li").hover(function() {
+			       	el = $(this).find('a');
 			        leftPos = el.position().left;
 			        newWidth = el.parent().width();
 			        magicLine.stop().animate({
@@ -30,9 +30,6 @@
 	$( 'a[href="#"]' ).on( 'click', function( e ){
 		e.preventDefault();
 	});
-	if( $( '.navbar a' ).attr('href') != '' || $( '.navbar a' ).attr('href') != '#' ){
-		
-	}
 
 	});//if document is ready (is loaded)
 
