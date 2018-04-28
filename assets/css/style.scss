@@ -1,8 +1,6 @@
 // hooks
 // # FONT Family
 $mainFont: 'Proxima Nova', Georgia, sans-serif;
-$colorStart: #4b86c0;
-$colorStop: #b0c3d4;
 
 // # font sizes
 $sidebarNav: 14px;
@@ -10,8 +8,18 @@ $sidebarNav: 14px;
 // # font colors
 $sideNavC: #95a5a6;
 $sideNavChover: #fff;
+$mainNavC: #2c3e50;
 
+// # background colors
+$colorStart: #4b86c0;
+$colorStop: #b0c3d4;
+$logoBg: #2ecc71;
+$mainBg: #ecf0f1;
+$sidebarBg: #34495e;
+
+// import fonts
 @import 'dashboard.css';
+
 // basic
 body,html{margin:0;padding:0;height:100%;}
 body{
@@ -32,18 +40,28 @@ body{
 	overflow-x: hidden;
 	overflow-y: scroll;
 }
+#header{
+	width:100%;
+	background: #fff;
+	border-bottom: 1px solid #e5e5e5;
+}
+#user-bar-header {
+	background: #fff;
+	width: 100%;
+}
 #left-sidebar{
 	width:200px;
 	height: 100%;
 	display:flex;
 	flex-direction:column;
-	background: #34495e;
+	background: $sidebarBg;
 	.sidebar-header {
 		height: 95px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		width: 100%;
+		background:$logoBg;
 	}
 	#sidebar-nav {
 		padding: 20px 0;
@@ -70,10 +88,36 @@ body{
 .da{
 	display:inline-block;
 	&:before{
-		content: '';
-		display: block;
 		color: $sideNavC;
 	}
+}
+.navbar-white{
+	.nav-pills{
+		@at-root{
+			.nav-link{
+				color:$mainNavC;
+				&.active{
+					background:transparent;
+					color:$mainNavC;
+					position:relative;
+				}
+				@at-root{
+					.show>&{
+						@extend .active;
+					}
+				}
+			}
+		}
+	}
+}
+.magic-line{
+	display:block;
+	width:100%;
+	height:4px;
+	background:#27ae60;
+	position: absolute;
+	bottom: -2px;
+	left: 0;
 }
 #main {
 	width: 933px;

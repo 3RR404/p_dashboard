@@ -15,7 +15,17 @@
 		"ft": 16,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "\/assets\/css\/dashboard-min.css",
+		"oAP": "\/assets\/css\/dashboard.min.css",
+		"oF": 2,
+		"oS": 3
+		},
+	"\/assets\/css\/dashboard.min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/assets\/css\/dashboard.min-min.css",
 		"oF": 0,
 		"oS": 3
 		},
@@ -481,6 +491,16 @@
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
+		},
+	"\/assets\/js\/scripts.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/assets\/js\/scripts-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
 		},
 	"\/index.html": {
 		"cB": 0,
