@@ -77,9 +77,9 @@ body {
         font-family: 'proxima_nova_ltsemibold', Georgia, sans-serif;
         font-size: 14px;
         text-transform: uppercase; }
-        #left-sidebar #sidebar-nav li .nav-link:hover, #left-sidebar #sidebar-nav li .nav-link.active, #left-sidebar #sidebar-nav li .show > .nav-link {
+        #left-sidebar #sidebar-nav li .nav-link:hover, #left-sidebar #sidebar-nav li .nav-link.active, #left-sidebar #sidebar-nav li .show > .nav-pills .nav-link, .show > .nav-pills #left-sidebar #sidebar-nav li .nav-link {
           color: #fff; }
-    #left-sidebar #sidebar-nav .nav-pills .nav-link.active, #left-sidebar #sidebar-nav .nav-pills .show > .nav-link, #left-sidebar #sidebar-nav .nav-pills .show > .nav-link {
+    #left-sidebar #sidebar-nav .nav-pills .nav-link.active, #left-sidebar #sidebar-nav .show > .nav-pills .nav-link, #left-sidebar #sidebar-nav .nav-pills .show > .nav-link {
       background-color: #243342; }
 
 .da {
@@ -87,9 +87,9 @@ body {
   .da:before {
     color: #95a5a6; }
 
-.nav-link {
+.nav-pills .nav-link {
   color: #2c3e50; }
-  .nav-link.active, .show > .nav-link {
+  .nav-pills .nav-link.active, .show > .nav-pills .nav-link {
     background: transparent;
     color: #2c3e50;
     position: relative; }

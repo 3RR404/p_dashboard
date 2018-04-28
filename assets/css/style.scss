@@ -92,20 +92,20 @@ body{
 	}
 }
 .navbar-white{
-	.nav-pills{
-		@at-root{
+	@at-root{
+		.nav-pills{
 			.nav-link{
-				color:$mainNavC;
-				&.active{
-					background:transparent;
 					color:$mainNavC;
-					position:relative;
-				}
-				@at-root{
-					.show>&{
-						@extend .active;
+					&.active{
+						background:transparent;
+						color:$mainNavC;
+						position:relative;
 					}
-				}
+					@at-root{
+						.show>&{
+							@extend .active;
+						}
+					}
 			}
 		}
 	}
