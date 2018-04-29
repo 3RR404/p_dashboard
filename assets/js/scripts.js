@@ -2,6 +2,17 @@
 
 	'use strict';
 
+	function openTab() {
+		$('a[href*="#"]').on('click',function(e){
+			var a = $(this).attr('href');
+			$( this ).parent('div').addClass('tab-head-active').removeClass('cell-disabled').siblings().removeClass('tab-head-active').addClass('cell-disabled');
+
+			$( '[id*="table-"] ' + a ).addClass('tab-active');
+			$( '[id*="table-"] ' + a ).siblings().removeClass('tab-active');
+			e.preventDefault();
+		});
+	}
+
 	jQuery( document ).ready( function( $ ){
 
 		var el, leftPos, newWidth,
@@ -26,7 +37,7 @@
 			            width: magicLine.data("origWidth")
 			        });
 			    });
-				
+
 	// Remove Anchors
 	$( 'a[href="#"]' ).on( 'click', function( e ){
 		e.preventDefault();
@@ -34,6 +45,8 @@
 
 	// Add tooltips Script
 	$('[data-toggle="tooltip"]').tooltip();
+
+	openTab();
 
 	});//if document is ready (is loaded)
 

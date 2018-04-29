@@ -309,36 +309,42 @@ a,button,input[type="submit"],.submit,#submit,.link{
 			padding-left:45px;
 			padding-right:45px;
 		}
-		> .row{
-			margin-left:-45px;
-			margin-right:-45px;
-		}
 		[id*="table-"]{
 			.table-head{
-				background:white;
-				border-top: $borders;
-				border-left:$borders;
-				border-right:$borders;
-				padding:0;
-				display: flex;
-				flex-direction: column;
-				justify-content: center;
-				align-items: center;
-				border-radius:4px 0 0 0;
-				.course,[class*="course"]{
-					color:$sCourse;
+				a{
+					display:flex;
+					justify-content:center;
+					align-items:center;
+					flex-direction:column;
+					flex: 1;
+					padding-top: 19px;
+					padding-bottom: 15px;
+					&:hover{
+						text-decoration:none;
+					}
 				}
-				.questions,[class*="questions"]{
-					color:$sQuest;
+				&.tab-head-active{
+					background:white;
+					border-top: $borders;
+					border-left:$borders;
+					border-right:$borders;
+					padding:0;
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+					border-radius:4px 0 0 0;
+					.course,[class*="course"]{
+						color:$sCourse;
+					}
+					.questions,[class*="questions"]{
+						color:$sQuest;
+					}
+					.exam,[class*="exam"]{
+						color:$sExam;
+					}
 				}
-				.exam,[class*="exam"]{
-					color:$sExam;
-				}
-				&:nth-child(2){
-					border:0;
-					background:$mainBg;
-					border-bottom: $borders;
-					border-radius:0 4px 0 0;
+				&.cell-disabled{
 					.course,[class*="course"]{
 						color:$sideNavC;
 					}
@@ -348,6 +354,9 @@ a,button,input[type="submit"],.submit,#submit,.link{
 					.exam,[class*="exam"]{
 						color:$sideNavC;
 					}
+				}
+				&:nth-child(2){
+					border-radius:0 4px 0 0;
 				}
 			}
 			.table-body{
@@ -390,12 +399,25 @@ a,button,input[type="submit"],.submit,#submit,.link{
 				flex: 1;
 			}
 		}
+		[id*="table-"]{
+			&:not(#table-friends):not(#table-stats){
+				.table-row{
+					&:nth-child(2),&:nth-child(3){
+						display:none;
+					}
+					&.tab-active{
+						display:flex;
+					}
+				}
+			}
+		}
 		.tb-row{
 			font-size:$tb_row;
 			color:$tb_row_color;
 			padding: 18px 25px;
 			border-bottom: $borders;
 			display:flex;
+			align-items: center;
 			position:relative;
 			.content{
 				overflow: hidden;
@@ -447,6 +469,10 @@ a,button,input[type="submit"],.submit,#submit,.link{
 				&-head,&-body,&-footer{
 					border-right:0;
 				}
+				&-body{
+					border-top:$borders;
+					border-radius:4px 0 0 4px;
+				}
 			}
 		}
 		#table-friends{
@@ -455,12 +481,22 @@ a,button,input[type="submit"],.submit,#submit,.link{
 			}
 			.table{
 				&-head{
+					background:white;
+					border-top: $borders;
+					border-left:$borders;
+					border-right:$borders;
+					padding:0;
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					border-radius:0 4px 0 0;
 					align-items:flex-start;
 					width:100%;
 					padding:10px 25px;
 					border-bottom:$borders;
 				}
 				&-body{
+					border-radius:0 0 0 0;
 					.tb-row{
 						border:0;
 						&:after{
@@ -475,6 +511,9 @@ a,button,input[type="submit"],.submit,#submit,.link{
 						    left: 25px;
 						}
 					}
+				}
+				&-footer{
+					border-radius:0 0 4px 0;
 				}
 			}
 		}
