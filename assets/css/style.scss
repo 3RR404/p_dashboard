@@ -11,6 +11,7 @@ $tb_footer: 12px;
 $sideNavC: #95a5a6;
 $sideNavChover: #fff;
 $mainNavC: #2c3e50;
+$userFont: #9ba3af;
 
 // # background colors
 $colorStart: #4b86c0;
@@ -29,6 +30,8 @@ $borders: 1px solid #dee1e2;
 	$sCourse:#e67333;
 	$sQuest:#8e44ad;
 	$sExam:#16a085;
+// table row hover color
+$tb_row_hover: #f6f8fc;
 
 // table h1
 $h1_ff: 'proxima_nova_altbold', Georgia, sans-serif;
@@ -38,6 +41,13 @@ $subtitle_size: 12px;
 // table text
 $tb_row: 13px;
 $tb_row_color:#7f8c8d;
+
+//viewportSize
+$xs: 'screen and (min-width: 425px)';
+$sm: 'screen and (min-width: 768px)';
+$md: 'screen and (min-width: 1024px)';
+$lg: 'screen and (min-width: 1200px)';
+$xl: 'screen and (min-width: 1400px)';
 
 // import fonts
 @import 'dashboard.css';
@@ -67,9 +77,26 @@ a,button,input[type="submit"],.submit,#submit,.link{
 }
 #window {
 	display: flex;
-	width: 1333px;
+		width: 100%;
+	@media #{$xs} {
+		width:400px;
+	}
+	@media #{$sm} {
+		width:720px;
+	}
+	@media #{$md}{
+		width: 992px;
+	}
+	@media #{$lg} {
+		width: 1133px;
+	}
+	@media #{$xl} {
+		width: 1333px;
+	}
 	height:100%;
-	max-height: 1090px;
+	@media #{$lg}{
+		max-height: 1090px;
+	}
 	margin: 0 auto;
 	flex-direction:row;
 	overflow-x: hidden;
@@ -121,7 +148,17 @@ a,button,input[type="submit"],.submit,#submit,.link{
 	}
 }
 #left-sidebar{
-	width:200px;
+	width: 0;
+	.navbar.navbar-dark{
+		display:none;
+	}
+	@media #{$xl}{
+		width:200px;
+		overflow:hidden;
+		.navbar.navbar-dark{
+			display:flex;
+		}
+	}
 	height: 100%;
 	display:flex;
 	flex-direction:column;
@@ -251,7 +288,14 @@ a,button,input[type="submit"],.submit,#submit,.link{
 			margin-left: 13px;
 			margin-top: 27px;
 			i{
-				color:#9ba3af;
+				color:$userFont;
+			}
+			&:hover{
+				background:$logoBg;
+				border-color:$logoBg;
+				i{
+					color:white;
+				}
 			}
 		}
 	}
@@ -280,6 +324,7 @@ a,button,input[type="submit"],.submit,#submit,.link{
 				flex-direction: column;
 				justify-content: center;
 				align-items: center;
+				border-radius:4px 0 0 0;
 				.course,[class*="course"]{
 					color:$sCourse;
 				}
@@ -293,6 +338,7 @@ a,button,input[type="submit"],.submit,#submit,.link{
 					border:0;
 					background:$mainBg;
 					border-bottom: $borders;
+					border-radius:0 4px 0 0;
 					.course,[class*="course"]{
 						color:$sideNavC;
 					}
@@ -308,6 +354,7 @@ a,button,input[type="submit"],.submit,#submit,.link{
 				background:#fff;
 				border-left:$borders;
 				border-right:$borders;
+				border-radius: 0 4px 0 0;
 				width:100%;
 			}
 			.table-footer{
@@ -319,6 +366,7 @@ a,button,input[type="submit"],.submit,#submit,.link{
 				font-size:$tb_footer;
 				padding: 7px 25px;
 				text-align: right;
+				border-radius: 0 0 4px 4px;
 			}
 			h1{
 				font-family:$h1_ff;
@@ -342,23 +390,107 @@ a,button,input[type="submit"],.submit,#submit,.link{
 				flex: 1;
 			}
 		}
-		#table-2{
-			.before-content{
-				min-width:35px;
-			}
-		}
 		.tb-row{
 			font-size:$tb_row;
 			color:$tb_row_color;
 			padding: 18px 25px;
 			border-bottom: $borders;
 			display:flex;
+			position:relative;
 			.content{
 				overflow: hidden;
 				text-overflow: ellipsis;
 				white-space: nowrap;
 			}
+			&:hover{
+				background:$tb_row_hover;
+				cursor:pointer;
+				&:before{
+					content:'';
+					display:inline;
+					height:100%;
+					background:gray;
+					width:4px;
+					position: absolute;
+					top: 0;
+					left: 0;
+				}
+			}
 		}
+		#table-1{
+			.tb-row:hover:before{
+				background:$sCourse;
+			}
+		}
+		#table-2{
+			.before-content{
+				min-width:35px;
+			}
+			.tb-row:hover:before{
+				background:$sQuest;
+			}
+		}
+		#table-3{
+			.tb-row:hover:before{
+				background:$sExam;
+			}
+		}
+		#table-stats{
+			.tb-row:hover{
+				background:transparent;
+				cursor:default;
+				&:before{
+					display:none;
+				}
+			}
+			.table{
+				&-head,&-body,&-footer{
+					border-right:0;
+				}
+			}
+		}
+		#table-friends{
+			.tb-row:hover:before{
+				background:$sQuest;
+			}
+			.table{
+				&-head{
+					align-items:flex-start;
+					width:100%;
+					padding:10px 25px;
+					border-bottom:$borders;
+				}
+				&-body{
+					.tb-row{
+						border:0;
+						&:after{
+							content:'';
+							display:block;
+							width:92.6%;
+							height:1px;
+							background:#dee1e2;
+							background: #dee1e2;
+						    position: absolute;
+						    bottom: 0;
+						    left: 25px;
+						}
+					}
+				}
+			}
+		}
+	}
+	.user-info-head {
+		display: inline-flex;
+		flex: 1;
+		align-items: center;
+		justify-content: flex-start;
+		.user-rating{
+			margin-bottom:.5rem;
+			margin-left:1.2em;
+		}
+	}
+	.user-depart, .user-exp{
+		color:$userFont;
 	}
 	#user-bar-header{
 		padding:19px 0 0 0;
@@ -374,6 +506,53 @@ a,button,input[type="submit"],.submit,#submit,.link{
 			padding-right:49px;
 			padding-bottom:19px;
 			padding-top:19px;
+		}
+	}
+	.table{
+		display:inline-block;
+		&:first-child, #table-stats{
+			@media #{$lg}{
+				width: 33.5%;
+				padding: 38px 0 0 15px;
+			}
+		}
+		&:nth-child(2), #table-friends, &:last-child{
+			@media #{$lg}{
+				width:65%;
+				padding:38px 0;
+			}
+		}
+		&-title{
+			color:$sideNavC;
+		}
+	}
+	.person{
+		font-size:13px;
+		&-avatar{
+			margin-right:13px;
+		}
+		&-name{
+			font-weight:bold;
+			color:#3498db;
+			margin-right:8px;
+		}
+		&-activity{
+			color:#7f8c8d;
+			margin-right:3px;
+		}
+		&-subject{
+			font-weight:bold;
+			color:#2c3e50;
+		}
+	}
+	.date{
+		color:#bdc3c7;
+		font-size:12px;
+	    display: flex;
+	    flex: 8 0 0;
+		justify-content: flex-end;
+		i{
+			margin-right:5px;
 		}
 	}
 }

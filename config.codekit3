@@ -362,6 +362,17 @@
 		"oAP": "\/assets\/fonts\/proxima-nova\/Mark Simonson - Proxima Nova Thin-webfont.woff2",
 		"oF": 0
 		},
+	"\/assets\/images\/avatar.png": {
+		"ft": 32768,
+		"iS": 5304,
+		"oA": 0,
+		"oAP": "\/assets\/images\/avatar.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"\/assets\/images\/avatar.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -522,6 +533,50 @@
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
+		},
+	"\/assets\/images\/users\/joe.png": {
+		"ft": 32768,
+		"iS": 2522,
+		"oA": 0,
+		"oAP": "\/assets\/images\/users\/joe.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/assets\/images\/users\/mary.png": {
+		"ft": 32768,
+		"iS": 2833,
+		"oA": 0,
+		"oAP": "\/assets\/images\/users\/mary.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/assets\/images\/users\/sean.png": {
+		"ft": 32768,
+		"iS": 2564,
+		"oA": 0,
+		"oAP": "\/assets\/images\/users\/sean.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/assets\/images\/users\/shawn.png": {
+		"ft": 32768,
+		"iS": 2341,
+		"oA": 0,
+		"oAP": "\/assets\/images\/users\/shawn.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/assets\/js\/scripts-min.js": {
 		"ft": 64,
