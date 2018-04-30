@@ -76,6 +76,7 @@ a,button,input[type="submit"],.submit,#submit,.link{
 	padding:0!important;
 }
 #window {
+	position:relative;
 	display: flex;
 		width: 100%;
 	@media #{$xs} {
@@ -263,6 +264,33 @@ a,button,input[type="submit"],.submit,#submit,.link{
 	padding:0;
 	background:$navLine;
 }
+.menu-collapse{
+	display:block;
+	position:absolute;
+	top:55px;
+	left:0;
+	a{
+		text-decoration:none;
+		color:#000;
+		background:#000;
+		display: block;
+		padding: 10px;
+		border-radius: 0 10px 4px 10px;
+		span{
+			display:block;
+			width:25px;
+			height:4px;
+			margin-bottom:4px;
+			background:#fff;
+			&:last-child{
+				margin-bottom:0;
+			}
+		}
+	}
+	@media #{$xl}{
+		display:none;
+	}
+}
 #main {
 	width: 933px;
 	display: flex;
@@ -271,6 +299,7 @@ a,button,input[type="submit"],.submit,#submit,.link{
 	align-items: flex-start;
 	flex-direction: column;
 	background:$mainBg;
+	overflow: hidden;
 	.user-depart > div {
 		display: inline-block;
 	}

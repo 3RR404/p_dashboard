@@ -46,6 +46,23 @@
 	// Add tooltips Script
 	$('[data-toggle="tooltip"]').tooltip();
 
+	$('[data-show="show-sidebar"]').on('click', function(){
+		var openById = $(this).attr('href');
+
+		if( $( openById ).attr('style') == 'width: 200px;' ){
+			$('#left-sidebar .navbar.navbar-dark').removeAttr('style');
+			$( openById ).animate({
+					'width': '0'
+				}, 420);
+			$( '.menu-collapse' ).animate({left:0},420);
+		} else {
+			$('#left-sidebar .navbar.navbar-dark').css('display','block');
+			$( openById ).animate({
+					'width': '200px'
+				}, 420);
+			$( '.menu-collapse' ).animate({left:'200px'},420);
+		}
+	});
 	openTab();
 
 	});//if document is ready (is loaded)

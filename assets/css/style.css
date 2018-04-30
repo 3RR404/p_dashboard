@@ -31,6 +31,7 @@ a:hover, button:hover, input[type="submit"]:hover, .submit:hover, #submit:hover,
   padding: 0 !important; }
 
 #window {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -214,6 +215,30 @@ a:hover, button:hover, input[type="submit"]:hover, .submit:hover, #submit:hover,
   padding: 0;
   background: #27ae60; }
 
+.menu-collapse {
+  display: block;
+  position: absolute;
+  top: 55px;
+  left: 0; }
+  .menu-collapse a {
+    text-decoration: none;
+    color: #000;
+    background: #000;
+    display: block;
+    padding: 10px;
+    border-radius: 0 10px 4px 10px; }
+    .menu-collapse a span {
+      display: block;
+      width: 25px;
+      height: 4px;
+      margin-bottom: 4px;
+      background: #fff; }
+      .menu-collapse a span:last-child {
+        margin-bottom: 0; }
+  @media screen and (min-width: 1400px) {
+    .menu-collapse {
+      display: none; } }
+
 #main {
   width: 933px;
   display: -webkit-box;
@@ -232,7 +257,8 @@ a:hover, button:hover, input[type="submit"]:hover, .submit:hover, #submit:hover,
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background: #ecf0f1; }
+  background: #ecf0f1;
+  overflow: hidden; }
   #main .user-depart > div {
     display: inline-block; }
   #main .user-actions {
