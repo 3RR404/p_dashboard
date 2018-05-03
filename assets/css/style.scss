@@ -83,11 +83,22 @@ body{
 	justify-content:center;
 	align-items:center;
 	background:linear-gradient(to bottom, $colorStart , $colorStop);
-	padding: 5% 0;
+	@media #{$md}{
+		padding: 5% 0;
+	}
+	@media screen and (max-width:425px){
+		font-size:100%;
+	}
 }
 img{
 	max-width:100%;
 	max-height:100%;
+}
+h4,.h4{
+	font-size:120%;
+	@media #{$xs}{
+		font-size:1.5rem;
+	}
 }
 a,button,input[type="submit"],.submit,#submit,.link{
 	&:hover{
@@ -119,6 +130,25 @@ a,button,input[type="submit"],.submit,#submit,.link{
     font-size: #{$i}px;
   }
 }
+$where: bottom;
+
+@if $where == "bottom" {
+	//@debug "$where is #{$where}";
+	$where: bottom;
+	@for $n from 1 through 100 {
+		.padd-#{$where}-#{$n} {
+			padding-#{$where}: #{$n}px;
+		}
+	}
+} @else if $where == "top" {
+	//@debug "$where is #{$where}";
+	@debug $where;
+	@for $n from 1 through 100 {
+		.padd-#{$where}-#{$n} {
+			padding-#{$where}: #{$n}px;
+		}
+	}
+}
 .dropdown{
 	margin-right:31px;
 	&-toggle::after{
@@ -128,6 +158,9 @@ a,button,input[type="submit"],.submit,#submit,.link{
 		.dropdown-menu{
 			min-width:10rem;
 		}
+	}
+	a{
+		color:$userFont;
 	}
 	.dropdown-menu{
 		min-width:20rem;
@@ -191,12 +224,6 @@ a,button,input[type="submit"],.submit,#submit,.link{
 	position:relative;
 	display: flex;
 		width: 100%;
-	@media #{$xs} {
-		width:400px;
-	}
-	@media #{$sm} {
-		width:720px;
-	}
 	@media #{$md}{
 		width: 992px;
 	}
@@ -219,12 +246,27 @@ a,button,input[type="submit"],.submit,#submit,.link{
 	width:100%;
 	background: #fff;
 	border-bottom: 1px solid #e5e5e5;
-	padding:23px 0;
+	padding: 10px 0;
+	@media #{$sm}{
+		padding:15px 0;
+	}
+	@media #{$md}{
+		padding:23px 0;
+	}
 	.search-bar{
 		@extend .main-logo;
 		input, button{
 				display:inline-block;
 			}
+		form[name="search"]{
+			position:relative;
+			input[type="text"]{
+				width:0;
+				position:absolute;
+				top:0;
+				left:0;
+			}
+		}
 	}
 	> .container-fluid{
 		padding-left:24px;
@@ -251,12 +293,14 @@ a,button,input[type="submit"],.submit,#submit,.link{
 	background: #fff;
 	width: 100%;
 	border-bottom:1px solid $hLine;
-	> .container-fluid{
-		padding-left:45px;
-		padding-right:45px;
-		> .row{
-			margin-left:0px;
-			margin-right:0px;
+	@media #{$md}{
+		> .container-fluid{
+			padding-left:45px;
+			padding-right:45px;
+			> .row{
+				margin-left:0px;
+				margin-right:0px;
+			}
 		}
 	}
 }
@@ -418,9 +462,20 @@ a,button,input[type="submit"],.submit,#submit,.link{
 	}
 	.user-actions{
 		display: flex;
-		justify-content: flex-end;
-		align-items: flex-start;
-		flex: 1;
+		@media screen and (max-width:424px){
+			flex-direction:column;
+			position:absolute;
+			top:0;
+			right:0;
+			justify-content: center;
+			align-items: flex-end;
+			align-content: space-between;
+		}
+		@media #{$xs}{
+			justify-content: flex-end;
+			align-items: flex-start;
+			flex: 1;
+		}
 		> a{
 			padding: 7px 12px;
 			border: 1px solid #cdd1d7;
@@ -428,7 +483,9 @@ a,button,input[type="submit"],.submit,#submit,.link{
 			line-height: 1.45em;
 			display: inline-table;
 			margin-left: 13px;
-			margin-top: 27px;
+			@media #{$sm}{
+				margin-top: 27px;
+			}
 			i{
 				color:$userFont;
 			}
@@ -447,9 +504,14 @@ a,button,input[type="submit"],.submit,#submit,.link{
 		box-sizing:border-box;
 		overflow-y: scroll;
 		padding: 38px 0;
-		> .container-fluid{
-			padding-left:45px;
-			padding-right:45px;
+		@media #{$md}{
+			> .container-fluid{
+				padding-left:45px;
+				padding-right:45px;
+			}
+		}
+		.nav{
+			flex-wrap:nowrap;
 		}
 		[id*="table-"]{
 			.table-head{
@@ -661,9 +723,15 @@ a,button,input[type="submit"],.submit,#submit,.link{
 		}
 	}
 	.user-info-head {
-		display: inline-flex;
+		display:flex;
+		flex-direction:column;
+		align-items: flex-start;
+		@media #{$xs}{
+			display: inline-flex;
+			flex-direction:row;
+			align-items: center;
+		}
 		flex: 1;
-		align-items: center;
 		justify-content: flex-start;
 		.user-rating{
 			margin-bottom:.5rem;
@@ -672,11 +740,23 @@ a,button,input[type="submit"],.submit,#submit,.link{
 	}
 	.user-depart, .user-exp{
 		color:$userFont;
+		display:inline-table;
+		@media #{$xs}{
+			display:block;
+		}
 	}
 	#user-bar-header{
-		padding:19px 0 0 0;
+		padding:19px 0;
+		position:relative;
+		@media #{$xs}{
+			padding:19px 0 0 0;
+		}
 	}
 	#main-content-nav{
+		display: none;
+		@media #{$xs}{
+			display:block
+		}
 		.nav-link{
 			padding:0!important;
 			font-size: $mainNav;
@@ -684,9 +764,12 @@ a,button,input[type="submit"],.submit,#submit,.link{
 			text-transform: uppercase;
 		}
 		.nav-item{
-			padding-right:49px;
-			padding-bottom:19px;
-			padding-top:19px;
+			@media #{$sm}{
+				padding-right:49px;
+				padding-bottom:19px;
+				padding-top:19px;
+			}
+			padding: 19px 5px 19px 0;
 		}
 	}
 	.table{

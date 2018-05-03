@@ -46,7 +46,7 @@
 		$(this).removeClass('unread-message');
 	});
 	$( '.dropdown a[href="#user-notification"]' ).on( 'click', function(){
-		( $('.dropdown').hasClass('show') == false ) ? $('.badge').css('display','block') : $('.badge').remove();
+		( $('.dropdown').hasClass('show') == 'show' ) ? $('.badge').css('display','block') : $('.badge').remove();
 	} );
 
 	// Add tooltips Script
