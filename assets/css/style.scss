@@ -12,6 +12,7 @@ $sideNavC: #95a5a6;
 $sideNavChover: #fff;
 $mainNavC: #2c3e50;
 $userFont: #9ba3af;
+$textLink: #3498db;
 
 // # background colors
 $colorStart: #4b86c0;
@@ -53,6 +54,27 @@ $xl: 'screen and (min-width: 1400px)';
 @import 'dashboard.css';
 @import '../fonts/proxima-nova/fonts.css';
 
+@keyframes colorchange
+    {
+      0%   {background: white;}
+      100% {background: $tb_row_hover;}
+    }
+@-webkit-keyframes colorchange
+    {
+      0%   {background: white;}
+      100% {background: $tb_row_hover;}
+    }
+@keyframes colorchangeBack
+    {
+      0%   {background: $tb_row_hover;}
+      100% {background: white;}
+    }
+@-webkit-keyframes colorchangeBack
+    {
+      0%   {background: $tb_row_hover;}
+      100% {background: white;}
+    }
+
 // basic
 body,html{margin:0;padding:0;height:100%;}
 body{
@@ -71,9 +93,99 @@ a,button,input[type="submit"],.submit,#submit,.link{
 	&:hover{
 		cursor:pointer;
 	}
+	&:active,&:focus{
+		border:0;
+		outline:0;
+		box-shaddow:0;
+	}
 }
 .navbar{
 	padding:0!important;
+}
+.text-italic{
+	font-style:italic;
+}
+.text-bold{
+	font-weight:calc(inherit+200);
+}
+.text-gray{
+	color:$userFont;
+}
+.text-link{
+	color:$textLink;
+}
+@for $i from 1 through 100 {
+  .font-#{$i} {
+    font-size: #{$i}px;
+  }
+}
+.dropdown{
+	margin-right:31px;
+	&-toggle::after{
+		display:none;
+	}
+	&#user-info{
+		.dropdown-menu{
+			min-width:10rem;
+		}
+	}
+	.dropdown-menu{
+		min-width:20rem;
+		padding:0;
+		.message {
+			display: flex;
+			overflow: hidden;
+			flex: 1;
+			justify-content: flex-start;
+			align-items: center;
+			flex-direction: row;
+			padding:10px 5px;
+			border-bottom: $borders;
+			&:last-child{border-bottom:0;}
+			&:hover{cursor:pointer;}
+			span {
+				display:inline;
+				white-space:nowrap;
+				margin-right:5px;
+				&:last-child{
+					margin-right:0;
+				}
+			}
+			.sender{
+				&-message{
+					overflow:hidden;
+					text-overflow: ellipsis;
+					white-space:nowrap;
+				}
+			}
+			.time{
+				flex-grow: 2;
+				text-align: right;
+			}
+			&:hover{
+				background:$tb_row_hover;
+			}
+			&.unread-message{
+				animation: colorchange 1.42s;
+				-webkit-animation: colorchange 1.42s;
+				background:$tb_row_hover;
+				&:hover{
+					animation: colorchangeBack 1.42s;
+					-webkit-animation: colorchangeBack 1.42s;
+					background:white;
+				}
+			}
+		}
+	}
+	&#user-notification{
+		.badge{
+			position:absolute;
+			top: -7.5px;
+			right: -6.25px;
+			border-radius: 50%;
+			font-size: 10px;
+		}
+	}
 }
 #window {
 	position:relative;
@@ -131,7 +243,7 @@ a,button,input[type="submit"],.submit,#submit,.link{
 		@extend .main-logo;
 		justify-content:flex-start;
 		.da{
-			margin-right:31px;
+			//margin-right:31px;
 		}
 	}
 }
@@ -269,6 +381,7 @@ a,button,input[type="submit"],.submit,#submit,.link{
 	position:absolute;
 	top:55px;
 	left:0;
+	z-index: 99;
 	a{
 		text-decoration:none;
 		color:#000;
@@ -601,7 +714,7 @@ a,button,input[type="submit"],.submit,#submit,.link{
 		}
 		&-name{
 			font-weight:bold;
-			color:#3498db;
+			color:$textLink;
 			margin-right:8px;
 		}
 		&-activity{

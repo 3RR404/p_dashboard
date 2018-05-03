@@ -1,9 +1,10 @@
 <!doctype html>
-<html>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta charset="utf-8">
 	<!-- Bootstrap 4 -->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
 	<!-- https://github.com/elliakou/proxima-nova-web-fonts -->
 	<link rel="stylesheet" type="text/css" href="assets/fonts/proxima-nova/fonts.min.css" />
 	<!-- Dasboard fonts
@@ -11,12 +12,12 @@
 	<link rel="stylesheet" type="text/css" href="style.css" />
 	<title>Project dasboard</title>
 	<!-- jQuery library -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
 	<!-- Bootstrap 4 JS basic and bundle -->
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.bundle.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+	<!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.bundle.min.js"></script>-->
 	<script src="assets/js/scripts.js" type="text/javascript" defer></script>
 </head>
 
@@ -39,31 +40,31 @@
 			<nav id="sidebar-nav" class="navbar navbar-dark">
 				<ul class="nav nav-pills nav-justified nav-items">
 					<li class="nav-item item first-item current">
-						<a href="#dashboard" title="Dashboard" data-toggle="tooltip" data-placement="right" class="nav-link active">
+						<a href="#dashboard" title="Dashboard" data-tooltip="tooltip" data-placement="right" class="nav-link active">
 							<i class="da da-dashboard"></i>
 							Dashboard
 						</a>
 					</li>
 					<li class="nav-item item">
-						<a href="#course" title="Course" data-toggle="tooltip" data-placement="right" class="nav-link">
+						<a href="#course" title="Course" data-tooltip="tooltip" data-placement="right" class="nav-link">
 							<i class="da da-course"></i>
 							Course
 						</a>
 					</li>
 					<li class="nav-item item">
-						<a href="#exam" title="Exam" data-toggle="tooltip" data-placement="right" class="nav-link">
+						<a href="#exam" title="Exam" data-tooltip="tooltip" data-placement="right" class="nav-link">
 							<i class="da da-exam"></i>
 							Exam
 						</a>
 					</li>
 					<li class="nav-item item">
-						<a href="#qanda" title="Q&amp;A" data-toggle="tooltip" data-placement="right" class="nav-link">
+						<a href="#qanda" title="Q&amp;A" data-tooltip="tooltip" data-placement="right" class="nav-link">
 							<i class="da da-chat-double-bouble"></i>
 							Q&amp;A
 						</a>
 					</li>
 					<li class="nav-item item">
-						<a href="#news" title="News" data-toggle="tooltip" data-placement="right" class="nav-link">
+						<a href="#news" title="News" data-tooltip="tooltip" data-placement="right" class="nav-link">
 							<i class="da da-news"></i>
 							News
 						</a>
@@ -76,9 +77,59 @@
 				<div class="container-fluid">
 					<div class="row clearfix">
 						<div class="user-bar col-lg-3 col-md-3 col-sm-4 col-xs-6">
-							<i class="da da-user"></i>
-							<i class="da da-chat-bouble"></i>
-							<i class="da da-bell"></i>
+							<div class="dropdown" id="user-info">
+								<a href="#user-info" class="dropdown-toggle" data-toggle="dropdown">
+									<i class="da da-user"></i>
+								</a>
+								<div class="dropdown-menu">
+									<span>nadsfhcsdj</span>
+								</div>
+							</div>
+							<div class="dropdown" id="user-messages">
+								<a href="#user-messages" class="dropdown-toggle" data-toggle="dropdown">
+									<i class="da da-chat-bouble"></i>
+								</a>
+								<div class="dropdown-menu font-13" id="user-info">
+									<div class="message unread-message">
+										<span id="sender-avatar"><img src="assets/images/users/img-placeholder.png" alt="No Picture" /></span>
+										<span id="sender-name" class="text-link text-bold">John Doe</span>
+										<span class="sender-message text-bold">Hey bro! What's up?</span>
+										<span class="time text-gray">Mon 12:11 PM</span>
+									</div><!--/.message.unread-message-->
+									<div class="message unread-message">
+										<span id="sender-avatar"><img src="assets/images/users/mary.png" alt="Mary avatar" /></span>
+										<span id="sender-name" class="text-link text-bold">Mary V. Robinson</span>
+										<span class="sender-message">Hi Hoa, i need a Help. Hav a time yet?</span>
+										<span class="time text-gray">Sat 6:40 PM</span>
+									</div><!--/.message.unread-message-->
+									<div class="message">
+										<span id="sender-avatar"><img src="assets/images/users/img-placeholder.png" alt="No Picture" /></span>
+										<span id="sender-name" class="text-link text-bold">Jane Doe</span>
+										<span class="sender-message text-bold">Hello, today we'll go?</span>
+										<span class="time text-gray">Fri 10:19 AM</span>
+									</div><!--/.message.unread-message-->
+								</div>
+							</div>
+							<div class="dropdown" id="user-notification">
+							<a href="#user-notification" class="dropdown-toggle" data-toggle="dropdown">
+								<i class="da da-bell"></i>
+								<span class="badge badge-danger">2</span>
+							</a>
+							<div class="dropdown-menu font-13">
+								<div class="notification-content">
+									<span class="user-name text-link">Emma M. Toeckely</span>
+									<span class="text-bold text-gray">Answered question:</span>
+									<span class="text-italic text-gray">How to make good logo?</span>
+									<span class="text-gray">7:15 AM</span>
+								</div>
+								<div class="notification-content">
+									<span class="user-name text-link">John Doe</span>
+									<span class="text-bold text-gray">Answered question:</span>
+									<span class="text-italic text-gray">How to make good logo?</span>
+									<span class="text-gray">8:50 AM</span>
+								</div>
+							</div>
+						</div>
 						</div>
 						<div class="main-logo col-lg-6 col-md-6 col-sm-4 xs-hidden">
 							<img src="assets/images/mainLogo.svg" alt="Main Logo" class="main-logo" />
@@ -103,7 +154,7 @@
 
 						<div class="user-info col-lg-8 col-md-8 col-sm-12">
 							<div class="user-info-head">
-								<h4 class="user-name" data-toggle="tooltip" data-placement="top" title="HOANG NGUYEN">HOANG NGUYEN</h4>
+								<h4 class="user-name" data-tooltip="tooltip" data-placement="top" title="HOANG NGUYEN">HOANG NGUYEN</h4>
 								<div class="user-rating">
 									<i class="da da-star"></i>
 									<i class="da da-star"></i>
@@ -116,7 +167,7 @@
 								<div class="student text-gray">Student</div>
 								&middot;
 								<div class="about-depart">
-									<a href="#learn-more" data-toggle="tooltip" data-placement="top" class="b-link" title="Learn more">Learn more</a>
+									<a href="#learn-more" data-tooltip="tooltip" data-placement="top" class="b-link" title="Learn more">Learn more</a>
 								</div>
 							</div>
 							<div class="user-exp">
@@ -125,8 +176,8 @@
 						</div>
 
 						<div class="user-actions col-lg-2 col-md-2 col-sm-6">
-							<a href="#edit" data-toggle="tooltip" data-placement="top" class="edit" title="Edit"><i class="da da-pencil"></i></a>
-							<a href="#log-out" data-toggle="tooltip" data-placement="top" class="logout" title="Log out"><i class="da da-exit"></i></a>
+							<a href="#edit" data-tooltip="tooltip" data-placement="top" class="edit" title="Edit"><i class="da da-pencil"></i></a>
+							<a href="#log-out" data-toggle="modal" data-tooltip="tooltip" data-placement="top" class="logout" title="Log out"><i class="da da-exit"></i></a>
 						</div>
 					</div>
 
@@ -676,7 +727,33 @@
 					</div>
 				</div><!--/.container-fluid-->
 			</main>
-		</div>
+		</div><!--/#main-->
+		<footer div id="footer">
+			<div class="modal" id="log-out">
+			    <div class="modal-dialog">
+			      <div class="modal-content">
+
+			        <!-- Modal Header -->
+			        <div class="modal-header">
+			          <h4 class="modal-title">Log out</h4>
+			          <button type="button" class="close" data-dismiss="modal">&times;</button>
+			        </div>
+
+			        <!-- Modal body -->
+			        <div class="modal-body">
+			          <p class="text-center text-italic">This action you'll log out from this locality.<p> <p class="text-center text-bold">Are you sure you would want do this?</p>
+			        </div>
+
+			        <!-- Modal footer -->
+			        <div class="modal-footer">
+						<a href="#close" class="btn btn-light" data-dismiss="modal">Never!</a>
+			          	<a href="https://oknaj.github.io/itvkurze?log-out=true&fpage=p_dashboard" class="btn btn-danger">I'm sure!</a>
+			        </div>
+
+			      </div>
+			    </div>
+			  </div>
+		</footer>
 	</div><!--/#window.window-->
 </body>
 </html>

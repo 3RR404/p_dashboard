@@ -42,9 +42,15 @@
 	$( 'a[href="#"]' ).on( 'click', function( e ){
 		e.preventDefault();
 	});
+	$( '.message.unread-message' ).on( 'mouseleave', function(){
+		$(this).removeClass('unread-message');
+	});
+	$( '.dropdown a[href="#user-notification"]' ).on( 'click', function(){
+		( $('.dropdown').hasClass('show') == false ) ? $('.badge').css('display','block') : $('.badge').remove();
+	} );
 
 	// Add tooltips Script
-	$('[data-toggle="tooltip"]').tooltip();
+	$('[data-tooltip="tooltip"]').tooltip();
 
 	$('[data-show="show-sidebar"]').on('click', function(){
 		var openById = $(this).attr('href');

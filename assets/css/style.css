@@ -1,5 +1,29 @@
 @import url(dashboard.css);
 @import url(../fonts/proxima-nova/fonts.css);
+@keyframes colorchange {
+  0% {
+    background: white; }
+  100% {
+    background: #f6f8fc; } }
+
+@-webkit-keyframes colorchange {
+  0% {
+    background: white; }
+  100% {
+    background: #f6f8fc; } }
+
+@keyframes colorchangeBack {
+  0% {
+    background: #f6f8fc; }
+  100% {
+    background: white; } }
+
+@-webkit-keyframes colorchangeBack {
+  0% {
+    background: #f6f8fc; }
+  100% {
+    background: white; } }
+
 body, html {
   margin: 0;
   padding: 0;
@@ -27,8 +51,390 @@ img {
 a:hover, button:hover, input[type="submit"]:hover, .submit:hover, #submit:hover, .link:hover {
   cursor: pointer; }
 
+a:active, a:focus, button:active, button:focus, input[type="submit"]:active, input[type="submit"]:focus, .submit:active, .submit:focus, #submit:active, #submit:focus, .link:active, .link:focus {
+  border: 0;
+  outline: 0;
+  box-shaddow: 0; }
+
 .navbar {
   padding: 0 !important; }
+
+.text-italic {
+  font-style: italic; }
+
+.text-bold {
+  font-weight: calc(inherit+200); }
+
+.text-gray {
+  color: #9ba3af; }
+
+.text-link {
+  color: #3498db; }
+
+.font-1 {
+  font-size: 1px; }
+
+.font-2 {
+  font-size: 2px; }
+
+.font-3 {
+  font-size: 3px; }
+
+.font-4 {
+  font-size: 4px; }
+
+.font-5 {
+  font-size: 5px; }
+
+.font-6 {
+  font-size: 6px; }
+
+.font-7 {
+  font-size: 7px; }
+
+.font-8 {
+  font-size: 8px; }
+
+.font-9 {
+  font-size: 9px; }
+
+.font-10 {
+  font-size: 10px; }
+
+.font-11 {
+  font-size: 11px; }
+
+.font-12 {
+  font-size: 12px; }
+
+.font-13 {
+  font-size: 13px; }
+
+.font-14 {
+  font-size: 14px; }
+
+.font-15 {
+  font-size: 15px; }
+
+.font-16 {
+  font-size: 16px; }
+
+.font-17 {
+  font-size: 17px; }
+
+.font-18 {
+  font-size: 18px; }
+
+.font-19 {
+  font-size: 19px; }
+
+.font-20 {
+  font-size: 20px; }
+
+.font-21 {
+  font-size: 21px; }
+
+.font-22 {
+  font-size: 22px; }
+
+.font-23 {
+  font-size: 23px; }
+
+.font-24 {
+  font-size: 24px; }
+
+.font-25 {
+  font-size: 25px; }
+
+.font-26 {
+  font-size: 26px; }
+
+.font-27 {
+  font-size: 27px; }
+
+.font-28 {
+  font-size: 28px; }
+
+.font-29 {
+  font-size: 29px; }
+
+.font-30 {
+  font-size: 30px; }
+
+.font-31 {
+  font-size: 31px; }
+
+.font-32 {
+  font-size: 32px; }
+
+.font-33 {
+  font-size: 33px; }
+
+.font-34 {
+  font-size: 34px; }
+
+.font-35 {
+  font-size: 35px; }
+
+.font-36 {
+  font-size: 36px; }
+
+.font-37 {
+  font-size: 37px; }
+
+.font-38 {
+  font-size: 38px; }
+
+.font-39 {
+  font-size: 39px; }
+
+.font-40 {
+  font-size: 40px; }
+
+.font-41 {
+  font-size: 41px; }
+
+.font-42 {
+  font-size: 42px; }
+
+.font-43 {
+  font-size: 43px; }
+
+.font-44 {
+  font-size: 44px; }
+
+.font-45 {
+  font-size: 45px; }
+
+.font-46 {
+  font-size: 46px; }
+
+.font-47 {
+  font-size: 47px; }
+
+.font-48 {
+  font-size: 48px; }
+
+.font-49 {
+  font-size: 49px; }
+
+.font-50 {
+  font-size: 50px; }
+
+.font-51 {
+  font-size: 51px; }
+
+.font-52 {
+  font-size: 52px; }
+
+.font-53 {
+  font-size: 53px; }
+
+.font-54 {
+  font-size: 54px; }
+
+.font-55 {
+  font-size: 55px; }
+
+.font-56 {
+  font-size: 56px; }
+
+.font-57 {
+  font-size: 57px; }
+
+.font-58 {
+  font-size: 58px; }
+
+.font-59 {
+  font-size: 59px; }
+
+.font-60 {
+  font-size: 60px; }
+
+.font-61 {
+  font-size: 61px; }
+
+.font-62 {
+  font-size: 62px; }
+
+.font-63 {
+  font-size: 63px; }
+
+.font-64 {
+  font-size: 64px; }
+
+.font-65 {
+  font-size: 65px; }
+
+.font-66 {
+  font-size: 66px; }
+
+.font-67 {
+  font-size: 67px; }
+
+.font-68 {
+  font-size: 68px; }
+
+.font-69 {
+  font-size: 69px; }
+
+.font-70 {
+  font-size: 70px; }
+
+.font-71 {
+  font-size: 71px; }
+
+.font-72 {
+  font-size: 72px; }
+
+.font-73 {
+  font-size: 73px; }
+
+.font-74 {
+  font-size: 74px; }
+
+.font-75 {
+  font-size: 75px; }
+
+.font-76 {
+  font-size: 76px; }
+
+.font-77 {
+  font-size: 77px; }
+
+.font-78 {
+  font-size: 78px; }
+
+.font-79 {
+  font-size: 79px; }
+
+.font-80 {
+  font-size: 80px; }
+
+.font-81 {
+  font-size: 81px; }
+
+.font-82 {
+  font-size: 82px; }
+
+.font-83 {
+  font-size: 83px; }
+
+.font-84 {
+  font-size: 84px; }
+
+.font-85 {
+  font-size: 85px; }
+
+.font-86 {
+  font-size: 86px; }
+
+.font-87 {
+  font-size: 87px; }
+
+.font-88 {
+  font-size: 88px; }
+
+.font-89 {
+  font-size: 89px; }
+
+.font-90 {
+  font-size: 90px; }
+
+.font-91 {
+  font-size: 91px; }
+
+.font-92 {
+  font-size: 92px; }
+
+.font-93 {
+  font-size: 93px; }
+
+.font-94 {
+  font-size: 94px; }
+
+.font-95 {
+  font-size: 95px; }
+
+.font-96 {
+  font-size: 96px; }
+
+.font-97 {
+  font-size: 97px; }
+
+.font-98 {
+  font-size: 98px; }
+
+.font-99 {
+  font-size: 99px; }
+
+.font-100 {
+  font-size: 100px; }
+
+.dropdown {
+  margin-right: 31px; }
+  .dropdown-toggle::after {
+    display: none; }
+  .dropdown#user-info .dropdown-menu {
+    min-width: 10rem; }
+  .dropdown .dropdown-menu {
+    min-width: 20rem;
+    padding: 0; }
+    .dropdown .dropdown-menu .message {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      overflow: hidden;
+      -webkit-box-flex: 1;
+          -ms-flex: 1;
+              flex: 1;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      padding: 10px 5px;
+      border-bottom: 1px solid #dee1e2; }
+      .dropdown .dropdown-menu .message:last-child {
+        border-bottom: 0; }
+      .dropdown .dropdown-menu .message:hover {
+        cursor: pointer; }
+      .dropdown .dropdown-menu .message span {
+        display: inline;
+        white-space: nowrap;
+        margin-right: 5px; }
+        .dropdown .dropdown-menu .message span:last-child {
+          margin-right: 0; }
+      .dropdown .dropdown-menu .message .sender-message {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap; }
+      .dropdown .dropdown-menu .message .time {
+        -webkit-box-flex: 2;
+            -ms-flex-positive: 2;
+                flex-grow: 2;
+        text-align: right; }
+      .dropdown .dropdown-menu .message:hover {
+        background: #f6f8fc; }
+      .dropdown .dropdown-menu .message.unread-message {
+        animation: colorchange 1.42s;
+        -webkit-animation: colorchange 1.42s;
+        background: #f6f8fc; }
+        .dropdown .dropdown-menu .message.unread-message:hover {
+          animation: colorchangeBack 1.42s;
+          -webkit-animation: colorchangeBack 1.42s;
+          background: white; }
+  .dropdown#user-notification .badge {
+    position: absolute;
+    top: -7.5px;
+    right: -6.25px;
+    border-radius: 50%;
+    font-size: 10px; }
 
 #window {
   position: relative;
@@ -90,8 +496,6 @@ a:hover, button:hover, input[type="submit"]:hover, .submit:hover, #submit:hover,
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start; }
-    #header .user-bar .da {
-      margin-right: 31px; }
 
 #user-bar-header {
   background: #fff;
@@ -219,7 +623,8 @@ a:hover, button:hover, input[type="submit"]:hover, .submit:hover, #submit:hover,
   display: block;
   position: absolute;
   top: 55px;
-  left: 0; }
+  left: 0;
+  z-index: 99; }
   .menu-collapse a {
     text-decoration: none;
     color: #000;
