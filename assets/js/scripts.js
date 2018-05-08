@@ -102,7 +102,7 @@
 				$backToTop.addClass( 'fade-out' );
 			}
 		});
-		
+
 		$backToTop.on('click', function(){
 			$( '#main-content' ).animate({
 					scrollTop: 0

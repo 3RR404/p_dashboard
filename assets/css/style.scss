@@ -616,6 +616,11 @@ $where: bottom;
 	.user-depart > div {
 		display: inline-block;
 	}
+	.user-rating{
+		.checked{
+			color:orange;
+		}
+	}
 	.user-actions{
 		display: flex;
 		@media screen and (max-width:424px){

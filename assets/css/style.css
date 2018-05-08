@@ -1167,6 +1167,8 @@ a:active, a:focus, button:active, button:focus, input[type="submit"]:active, inp
   overflow: hidden; }
   #main .user-depart > div {
     display: inline-block; }
+  #main .user-rating .checked {
+    color: orange; }
   #main .user-actions {
     display: -webkit-box;
     display: -ms-flexbox;
