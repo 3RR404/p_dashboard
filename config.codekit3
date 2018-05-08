@@ -15,8 +15,8 @@
 		"ft": 16,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "\/assets\/css\/dashboard.min.css",
-		"oF": 2,
+		"oAP": "\/assets\/css\/dashboard-min.css",
+		"oF": 0,
 		"oS": 3
 		},
 	"\/assets\/css\/dashboard.min.css": {
@@ -588,6 +588,26 @@
 		"opt": 0,
 		"oT": 1,
 		"q": 100
+		},
+	"\/assets\/js\/hilitor-min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/assets\/js\/hilitor-min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"\/assets\/js\/hilitor.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/assets\/js\/hilitor-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
 		},
 	"\/assets\/js\/scripts-min.js": {
 		"ft": 64,

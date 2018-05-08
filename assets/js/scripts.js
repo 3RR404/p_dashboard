@@ -66,7 +66,7 @@
 			e.preventDefault();
 		});
 	}
-	if( viewportSize.getWidth() < 670 ) {
+	if( viewportSize.getWidth() < 768 ) {
 		$('#main #main-content').scroll(function(){
 			var offset = 190;
 
@@ -79,6 +79,35 @@
 				$('#user-bar-header').stop().animate({top:'0'},1000 );
 				$('header').stop().animate({top:0});
 			}
+		});
+	}
+
+	if( viewportSize.getWidth() >= 768 && viewportSize.getWidth() < 1199 ){
+		var link = $( '.nav-link' );
+		link.find('span').css('display','none');
+	} else if( viewportSize.getWidth() > 1200 || viewportSize.getWidth() < 768 ){
+		var link = $( '.nav-link' );
+		link.find('span').css('display','block');
+	}
+
+	// back to top button
+	function btnBackToTop(){
+		var offset = 200,
+			offsetOpacity = 200,
+			$backToTop = $('.btn-to-top');
+
+		$( '#main-content' ).scroll(function() {
+			( $( this ).scrollTop() > offset ) ? $backToTop.addClass( 'is-visible' ) : $backToTop.removeClass( 'is-visible fade-out' );
+			if ( $( this ).scrollTop() > offsetOpacity ) {
+				$backToTop.addClass( 'fade-out' );
+			}
+		});
+		
+		$backToTop.on('click', function(){
+			$( '#main-content' ).animate({
+					scrollTop: 0
+				}, 700
+			);
 		});
 	}
 
@@ -110,11 +139,28 @@
 	$( 'a[href="#"]' ).on( 'click', function( e ){
 		e.preventDefault();
 	});
+
+	// Logo onClick roll back the site to top in 700 ms
+	$( 'a[href="#home"]' ).on( 'click', function(){
+		$( '#main-content' ).animate({
+				scrollTop: 0
+			}, 700
+		);
+	});
+
 	$( '.message.unread-message' ).on( 'mouseleave', function(){
 		$(this).removeClass('unread-message');
 	});
 	$( '.dropdown a[href="#user-notification"]' ).on( 'click', function(){
 		( $('.dropdown').hasClass('show') == 'show' ) ? $('.badge').css('display','block') : $('.badge').remove();
+	} );
+
+	$( '[href="#open-searchbar"]' ).on( 'click', function(){
+		$( '#search-bar-form' ).animate({ 'width':'100%' }, 1000);
+	} );
+	$( '.closebtn' ).on( 'click', function( event ){
+		$('.overlay').animate({'width':'0'}, 1000);
+		event.preventDefault();
 	} );
 
 	// Add tooltips Script
@@ -137,7 +183,24 @@
 			$( '.menu-collapse' ).animate({left:'200px'},420);
 		}
 	});
+
 	openTab();
+
+	btnBackToTop();
+
+	$('[name="submit"]').on('click', function( event ){
+		event.preventDefault();
+		$('.overlay').animate({'width':'0'}, 1000);
+		//Hilitor.apply();
+	});
+	$( 'input#search' ).on('keyup', function(){
+		var intVal = $( '#search' ).val();
+		if( intVal == '' || intVal == ' ' ){
+			$('button[name="clear-search"]').css('display','none');
+		} else {
+			$('button[name="clear-search"]').css('display','block');
+		}
+	});
 
 	});//if document is ready (is loaded)
 
