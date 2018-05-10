@@ -247,6 +247,8 @@
 				$( '.user-name' ).attr({'title': newUserName, 'data-original-title': newUserName});
 				if( newUserName != null || newUserName != ' ' ){
 					localStorage.setItem("username", newUserName);
+				} else {
+					localStorage.setItem("username", "HOANG NGUYEN");
 				}
 
 				$(this).hide();
