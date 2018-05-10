@@ -245,7 +245,9 @@
 				$( 'h4.user-name' ).show().html( newUserName );
 				$( '.brand-logo .brand-title' ).html( newUserName );
 				$( '.user-name' ).attr({'title': newUserName, 'data-original-title': newUserName});
-				localStorage.setItem("username", newUserName);
+				if( newUserName != null || newUserName != ' ' ){
+					localStorage.setItem("username", newUserName);
+				}
 
 				$(this).hide();
 				$('a[href="#edit"]').show();
