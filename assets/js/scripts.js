@@ -262,7 +262,7 @@
 				headerTitle.html( storedName ).attr({ 'title': storedName, 'data-original-title': storedName });
 				brandTitle.html( storedName );
 			} else {
-				var storedName = 'HOANG NGUYEN';
+				var storedName = localStorage.setItem("username", "HOANG NGUYEN");
 				headerTitle.html( storedName ).attr({ 'title': storedName, 'data-original-title': storedName });
 				brandTitle.html( storedName );
 			}
