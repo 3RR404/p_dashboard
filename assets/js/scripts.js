@@ -251,19 +251,18 @@
 				$('a[href="#edit"]').show();
 				e.preventDefault();
 			});
-
-			if (typeof(Storage) !== "undefined") {
-
-		    var headerTitle = $("#user-name"),
-				brandTitle = $('#brand-title');
-				headerTitle.html( localStorage.getItem("username") );
-				brandTitle.html( localStorage.getItem("username") );
-			} else {
-			    document.getElementById("user-name").innerHTML = "HOANG NGUYEN";
-				document.getElementById("brand-title").innerHTML = "HOANG NGUYEN";
-			}
 		});
 
+		if (typeof(Storage) !== "undefined") {
+
+		var headerTitle = $("#user-name"),
+			brandTitle = $('#brand-title');
+			headerTitle.html( localStorage.getItem("username") );
+			brandTitle.html( localStorage.getItem("username") );
+		} else {
+			document.getElementById("user-name").innerHTML = "HOANG NGUYEN";
+			document.getElementById("brand-title").innerHTML = "HOANG NGUYEN";
+		}
 
 	});//if document is ready (is loaded
 
