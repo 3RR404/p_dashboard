@@ -2,9 +2,6 @@
 
 	'use strict';
 
-	localStorage.setItem("lastname", "Smith");
-	alert( localStorage.getItem("lastname") );
-	
 	var getSize;
     window.viewportSize = {};
 
@@ -248,12 +245,15 @@
 				$( 'h4.user-name' ).show().html( newUserName );
 				$( '.brand-logo .brand-title' ).html( newUserName );
 				$( '.user-name' ).attr({'title': newUserName, 'data-original-title': newUserName});
+				localStorage.setItem("lastname", newUserName);
 
 				$(this).hide();
 				$('a[href="#edit"]').show();
 				e.preventDefault();
 			});
 		});
+
+
 
 	});//if document is ready (is loaded
 
