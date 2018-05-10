@@ -245,10 +245,8 @@
 				$( 'h4.user-name' ).show().html( newUserName );
 				$( '.brand-logo .brand-title' ).html( newUserName );
 				$( '.user-name' ).attr({'title': newUserName, 'data-original-title': newUserName});
-				if( newUserName != null || newUserName != ' ' ){
+				if( newUserName != null ){
 					localStorage.setItem("username", newUserName);
-				} else {
-					localStorage.setItem("username", "HOANG NGUYEN");
 				}
 
 				$(this).hide();
@@ -261,12 +259,12 @@
 			brandTitle = $('#brand-title');
 
 		if (typeof(Storage) !== "undefined") {
-			if( localStorage.getItem("username") != null || localStorage.getItem("username") != ' ' ){
+			if( localStorage.getItem("username") != null ){
 				var storedName = localStorage.getItem("username");
 				headerTitle.html( storedName ).attr({ 'title': storedName, 'data-original-title': storedName });
 				brandTitle.html( storedName );
 			} else {
-				//localStorage.setItem("username", "HOANG NGUYEN");
+				// localStorage.setItem("username", "HOANG NGUYEN");
 				var storedName = "HOANG NGUYEN"; //localStorage.getItem("username");
 				headerTitle.html( storedName ).attr({ 'title': storedName, 'data-original-title': storedName });
 				brandTitle.html( storedName );
