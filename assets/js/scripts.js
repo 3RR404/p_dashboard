@@ -253,11 +253,11 @@
 			});
 		});
 
-		if (typeof(Storage) !== "undefined") {
-
 		var headerTitle = $("#user-name"),
-			brandTitle = $('#brand-title'),
-			storedName = localStorage.getItem("username");
+			brandTitle = $('#brand-title');
+
+		if (typeof(Storage) !== "undefined") {
+			var storedName = localStorage.getItem("username");
 			headerTitle.html( storedName ).attr({ 'title': storedName, 'data-original-title': storedName });
 			brandTitle.html( storedName );
 		} else {
