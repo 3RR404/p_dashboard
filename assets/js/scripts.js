@@ -257,9 +257,15 @@
 			brandTitle = $('#brand-title');
 
 		if (typeof(Storage) !== "undefined") {
-			var storedName = localStorage.getItem("username");
-			headerTitle.html( storedName ).attr({ 'title': storedName, 'data-original-title': storedName });
-			brandTitle.html( storedName );
+			if( localStorage.getItem("username") != null || localStorage.getItem("username") != ' ' ){
+				var storedName = localStorage.getItem("username");
+				headerTitle.html( storedName ).attr({ 'title': storedName, 'data-original-title': storedName });
+				brandTitle.html( storedName );
+			} else {
+				var storedName = 'HOANG NGUYEN';
+				headerTitle.html( storedName ).attr({ 'title': storedName, 'data-original-title': storedName });
+				brandTitle.html( storedName );
+			}
 		} else {
 			headerTitle.html( "HOANG NGUYEN" );
 			headerTitle.html( "HOANG NGUYEN" );
