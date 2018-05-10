@@ -256,12 +256,13 @@
 		if (typeof(Storage) !== "undefined") {
 
 		var headerTitle = $("#user-name"),
-			brandTitle = $('#brand-title');
-			headerTitle.html( localStorage.getItem("username") );
-			brandTitle.html( localStorage.getItem("username") );
+			brandTitle = $('#brand-title'),
+			storedName = localStorage.getItem("username");
+			headerTitle.html( storedName ).attr({ 'title': storedName, 'data-original-title': storedName });
+			brandTitle.html( storedName );
 		} else {
-			document.getElementById("user-name").innerHTML = "HOANG NGUYEN";
-			document.getElementById("brand-title").innerHTML = "HOANG NGUYEN";
+			headerTitle.html( "HOANG NGUYEN" );
+			headerTitle.html( "HOANG NGUYEN" );
 		}
 
 	});//if document is ready (is loaded
