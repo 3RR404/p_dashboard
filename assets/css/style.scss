@@ -187,6 +187,7 @@ $where: bottom;
 	.dropdown-menu{
 		max-width:20rem;
 		width:auto;
+		box-shadow: 0px 5px 6px -1px #cecece;
 		@media #{$sm}{
 			min-width:20rem;
 			max-width:30rem;
@@ -293,6 +294,9 @@ $where: bottom;
 			display:block;
 		}
 		#search-bar-overlay{
+			@media #{$sm}{
+				display:none;
+			}
 			a{
 				color:$userFont;
 			}
@@ -304,6 +308,9 @@ $where: bottom;
 			position: absolute;
 			top: -25px;
 			@media #{$sm}{
+				display:none;
+			}
+			@media #{$md}{
 				top:-2.5em;
 			}
 			left: 0;
@@ -323,6 +330,10 @@ $where: bottom;
 				box-shadow:0;
 				border:0;
 				outline:0;
+				@media #{$sm}{
+					position:static;
+					border-radius:5px;
+				}
 				&[name="submit"]{
 					width:35px;
 					height:35px;
@@ -338,6 +349,16 @@ $where: bottom;
 					font-size:1em;
 					line-height:1em;
 					color: rgba(0,0,0,.85);
+					@media #{$sm}{
+						position:absolute;
+						background:#000;
+						color: #fff;
+						width: 18px;
+						height: 18px;
+						font-size: .75em;
+						line-height: .5em;
+						top:7px;
+					}
 				}
 			}
 		form[name="search"]{
@@ -350,12 +371,29 @@ $where: bottom;
 				border: 0;
 				padding:10px 0;
 				color:#fff;
+				@media #{$sm}{
+					color:#000;
+					padding:5px 10px;
+					width:auto;
+					transition:ease-in-out .42s all;
+				}
 				&::placeholder{
 					color:white;
+					@media #{$sm}{
+						color:#cdcdcd;
+					}
+				}
+				&:focus{
+					@media #{$sm}{
+						box-shadow: 0px 1px 0 #cdcdcd;
+					}
 				}
 			}
 			.da{
 				color:#fff;
+				@media #{$sm}{
+					color:#000;
+				}
 			}
 		}
 	}
@@ -391,6 +429,13 @@ $where: bottom;
 	overflow:hidden;
 	background:rgba(0,0,0,.85);
 	z-index:999;
+	@media #{$sm}{
+		position:static;
+		background:transparent;
+		height:auto;
+		width:auto;
+		overflow:visible;
+	}
 	&-content{
 		width: 100%;
 		padding: 0 15px;
@@ -400,12 +445,20 @@ $where: bottom;
 		height: 100%;
 		top: 0;
 		left: 0;
+		@media #{$sm}{
+			position:static;
+			transform: translate(0,0);
+			height:auto;
+		}
 	}
 	span{
 		display:block;
 		text-align:right;
 		width:100%;
 		height:auto;
+		@media #{$sm}{
+			display:none;
+		}
 		a{
 			color:$userFont;
 			text-shadow: 1px 0px 0 #fff,-1px 0px 0 #fff,0px -1px 0 #fff;
@@ -816,6 +869,8 @@ $where: bottom;
 		#table-2{
 			.before-content{
 				min-width:35px;
+				display: flex;
+				align-items: center;
 			}
 			.tb-row:hover:before{
 				background:$sQuest;
@@ -824,6 +879,29 @@ $where: bottom;
 		#table-3{
 			.tb-row:hover:before{
 				background:$sExam;
+			}
+			#following{
+				.before-content{
+					position:absolute;
+					bottom:0;
+					display:block;
+					width:100%;
+					height:100%;
+					left: 0;
+					padding: 0 25px;
+					.chart {
+						height: 70%;
+						position: absolute;
+						bottom: 0;
+						display: flex;
+						flex-direction: column;
+						justify-content: flex-end;
+						align-items: center;
+					}
+				}
+				.content{
+					margin-left: 40px;
+				}
 			}
 		}
 		#table-stats{

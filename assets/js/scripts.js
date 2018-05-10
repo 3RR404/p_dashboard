@@ -188,11 +188,26 @@
 
 	btnBackToTop();
 
-	$('[name="submit"]').on('click', function( event ){
-		event.preventDefault();
-		$('.overlay').animate({'width':'0'}, 1000);
-		//Hilitor.apply();
-	});
+	$('.chart').each( function(){
+		var dataVal = $(this).attr('data-chart');
+		$(this).append('<canvas class="newCanvas"></canvas>');
+		$(this).find('.newCanvas').width('30px').height(dataVal + '%');
+		var ctx = $(this).find('.newCanvas')[0].getContext('2d');
+			ctx.fillStyle = "#16a085";
+			ctx.fillRect(0,0,600,800);
+	} );
+
+	if( viewportSize.getWidth() < 768 ){
+		$('[name="submit"]').on('click', function( event ){
+			event.preventDefault();
+			$('.overlay').animate({'width':'0'}, 1000);
+			//Hilitor.apply();
+		});
+	} else {
+		$('[name="submit"]').on('click', function( event ){
+			event.preventDefault();
+		});
+	}
 	$( 'input#search' ).on('keyup', function(){
 		var intVal = $( '#search' ).val();
 		if( intVal == '' || intVal == ' ' ){

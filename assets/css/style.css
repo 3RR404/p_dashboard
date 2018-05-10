@@ -745,6 +745,8 @@ a:active, a:focus, button:active, button:focus, input[type="submit"]:active, inp
   .dropdown .dropdown-menu {
     max-width: 20rem;
     width: auto;
+    -webkit-box-shadow: 0px 5px 6px -1px #cecece;
+            box-shadow: 0px 5px 6px -1px #cecece;
     padding: 0;
     z-index: 99; }
     @media screen and (min-width: 768px) {
@@ -853,6 +855,9 @@ a:active, a:focus, button:active, button:focus, input[type="submit"]:active, inp
       padding: 23px 0; } }
   #header .search-bar #search-bar-form {
     display: block; }
+  @media screen and (min-width: 768px) {
+    #header .search-bar #search-bar-overlay {
+      display: none; } }
   #header .search-bar #search-bar-overlay a {
     color: #9ba3af; }
   #header .search-bar #search-bar-overlay:hover {
@@ -867,6 +872,9 @@ a:active, a:focus, button:active, button:focus, input[type="submit"]:active, inp
     width: 100%; }
     @media screen and (min-width: 768px) {
       #header .search-bar .describ {
+        display: none; } }
+    @media screen and (min-width: 1024px) {
+      #header .search-bar .describ {
         top: -2.5em; } }
   #header .search-bar input, #header .search-bar button {
     display: inline-block;
@@ -879,6 +887,10 @@ a:active, a:focus, button:active, button:focus, input[type="submit"]:active, inp
             box-shadow: 0;
     border: 0;
     outline: 0; }
+    @media screen and (min-width: 768px) {
+      #header .search-bar input, #header .search-bar button {
+        position: static;
+        border-radius: 5px; } }
     #header .search-bar input[name="submit"], #header .search-bar button[name="submit"] {
       width: 35px;
       height: 35px; }
@@ -893,6 +905,16 @@ a:active, a:focus, button:active, button:focus, input[type="submit"]:active, inp
       font-size: 1em;
       line-height: 1em;
       color: rgba(0, 0, 0, 0.85); }
+      @media screen and (min-width: 768px) {
+        #header .search-bar input[name="clear-search"], #header .search-bar button[name="clear-search"] {
+          position: absolute;
+          background: #000;
+          color: #fff;
+          width: 18px;
+          height: 18px;
+          font-size: .75em;
+          line-height: .5em;
+          top: 7px; } }
   #header .search-bar form[name="search"] {
     position: relative; }
     #header .search-bar form[name="search"] input[type="text"] {
@@ -904,6 +926,13 @@ a:active, a:focus, button:active, button:focus, input[type="submit"]:active, inp
       border: 0;
       padding: 10px 0;
       color: #fff; }
+      @media screen and (min-width: 768px) {
+        #header .search-bar form[name="search"] input[type="text"] {
+          color: #000;
+          padding: 5px 10px;
+          width: auto;
+          -webkit-transition: ease-in-out .42s all;
+          transition: ease-in-out .42s all; } }
       #header .search-bar form[name="search"] input[type="text"]::-webkit-input-placeholder {
         color: white; }
       #header .search-bar form[name="search"] input[type="text"]:-ms-input-placeholder {
@@ -912,8 +941,24 @@ a:active, a:focus, button:active, button:focus, input[type="submit"]:active, inp
         color: white; }
       #header .search-bar form[name="search"] input[type="text"]::placeholder {
         color: white; }
+        @media screen and (min-width: 768px) {
+          #header .search-bar form[name="search"] input[type="text"]::-webkit-input-placeholder {
+            color: #cdcdcd; }
+          #header .search-bar form[name="search"] input[type="text"]:-ms-input-placeholder {
+            color: #cdcdcd; }
+          #header .search-bar form[name="search"] input[type="text"]::-ms-input-placeholder {
+            color: #cdcdcd; }
+          #header .search-bar form[name="search"] input[type="text"]::placeholder {
+            color: #cdcdcd; } }
+      @media screen and (min-width: 768px) {
+        #header .search-bar form[name="search"] input[type="text"]:focus {
+          -webkit-box-shadow: 0px 1px 0 #cdcdcd;
+                  box-shadow: 0px 1px 0 #cdcdcd; } }
     #header .search-bar form[name="search"] .da {
       color: #fff; }
+      @media screen and (min-width: 768px) {
+        #header .search-bar form[name="search"] .da {
+          color: #000; } }
   #header > .container-fluid {
     padding-left: 24px;
     padding-right: 24px; }
@@ -946,6 +991,13 @@ a:active, a:focus, button:active, button:focus, input[type="submit"]:active, inp
   overflow: hidden;
   background: rgba(0, 0, 0, 0.85);
   z-index: 999; }
+  @media screen and (min-width: 768px) {
+    .overlay {
+      position: static;
+      background: transparent;
+      height: auto;
+      width: auto;
+      overflow: visible; } }
   .overlay-content {
     width: 100%;
     padding: 0 15px;
@@ -956,11 +1008,20 @@ a:active, a:focus, button:active, button:focus, input[type="submit"]:active, inp
     height: 100%;
     top: 0;
     left: 0; }
+    @media screen and (min-width: 768px) {
+      .overlay-content {
+        position: static;
+        -webkit-transform: translate(0, 0);
+                transform: translate(0, 0);
+        height: auto; } }
   .overlay span {
     display: block;
     text-align: right;
     width: 100%;
     height: auto; }
+    @media screen and (min-width: 768px) {
+      .overlay span {
+        display: none; } }
     .overlay span a {
       color: #9ba3af;
       text-shadow: 1px 0px 0 #fff,-1px 0px 0 #fff,0px -1px 0 #fff;
@@ -1364,11 +1425,44 @@ a:active, a:focus, button:active, button:focus, input[type="submit"]:active, inp
     #main #main-content #table-1 .tb-row:hover:before {
       background: #e67333; }
     #main #main-content #table-2 .before-content {
-      min-width: 35px; }
+      min-width: 35px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
     #main #main-content #table-2 .tb-row:hover:before {
       background: #8e44ad; }
     #main #main-content #table-3 .tb-row:hover:before {
       background: #16a085; }
+    #main #main-content #table-3 #following .before-content {
+      position: absolute;
+      bottom: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      padding: 0 25px; }
+      #main #main-content #table-3 #following .before-content .chart {
+        height: 70%;
+        position: absolute;
+        bottom: 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: end;
+            -ms-flex-pack: end;
+                justify-content: flex-end;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center; }
+    #main #main-content #table-3 #following .content {
+      margin-left: 40px; }
     #main #main-content #table-stats .tb-row:hover {
       background: transparent;
       cursor: default; }
