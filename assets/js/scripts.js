@@ -1,6 +1,10 @@
 (function( $ ) {
 
 	'use strict';
+
+	localStorage.setItem("lastname", "Smith");
+	alert( localStorage.getItem("lastname") );
+	
 	var getSize;
     window.viewportSize = {};
 
@@ -55,6 +59,7 @@
         }
         return size;
     };
+
 
 	function openTab() {
 		$('a[href*="#"]').on('click',function(e){
@@ -208,6 +213,7 @@
 			event.preventDefault();
 		});
 	}
+
 	$( 'input#search' ).on('keyup', function(){
 		var intVal = $( '#search' ).val();
 		if( intVal == '' || intVal == ' ' ){
@@ -217,6 +223,38 @@
 		}
 	});
 
-	});//if document is ready (is loaded)
+	/**
+	 *
+	 * Hide edit button and show Save button
+	 * Add new text input and hide the Heading
+	 * delete old Text from heading and set new
+	 *
+	 */
+		$( 'a[href="#edit"]' ).on( 'click', function( e ){
+			var userName = $( 'h4.user-name' ).text();
+				$( 'h4.user-name' ).hide();
+				$('.user-info-head').append('<input type="text" class="userName" name="userName" value="' + userName + '" />');
+			$(this).hide();
+			$('.user-actions').each(function(){
+				$(this).append('<a href="#save-it" class="save-it">Save</a>');
+			});
+			e.preventDefault();
+		} );
+		$('.user-info-head').on('keyup', '.userName', function(){
+			var newUserName =  $(this).val();
+
+			$( '.user-actions' ).on( 'click', 'a[href="#save-it"]', function( e ){
+				$('.userName').hide();
+				$( 'h4.user-name' ).show().html( newUserName );
+				$( '.brand-logo .brand-title' ).html( newUserName );
+				$( '.user-name' ).attr({'title': newUserName, 'data-original-title': newUserName});
+
+				$(this).hide();
+				$('a[href="#edit"]').show();
+				e.preventDefault();
+			});
+		});
+
+	});//if document is ready (is loaded
 
 })(window.jQuery);
