@@ -198,6 +198,15 @@
 			ctx.fillStyle = "#16a085";
 			ctx.fillRect(0,0,600,800);
 	} );
+	$( '.exp-chart' ).each( function(){
+		var dataChartVal = $(this).attr('data-chart');
+		$(this).append('<canvas class="newChartCanvas"></canvas>');
+		$(this).find('.newChartCanvas').width('45px').height( dataChartVal + '%' );
+		var ctxA = $(this).find('.newChartCanvas')[0].getContext('2d');
+			ctxA.fillStyle = '#2ecc71';
+			ctxA.fillRect(0,0,600,800);
+
+	} );
 
 	if( viewportSize.getWidth() < 768 ){
 		$('[name="submit"]').on('click', function( event ){

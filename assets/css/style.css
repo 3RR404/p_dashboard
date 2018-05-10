@@ -917,6 +917,11 @@ a:active, a:focus, button:active, button:focus, input[type="submit"]:active, inp
           top: 7px; } }
   #header .search-bar form[name="search"] {
     position: relative; }
+    @media screen and (min-width: 768px) {
+      #header .search-bar form[name="search"] {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; } }
     #header .search-bar form[name="search"] input[type="text"] {
       width: 100%;
       left: 0;
@@ -929,7 +934,7 @@ a:active, a:focus, button:active, button:focus, input[type="submit"]:active, inp
       @media screen and (min-width: 768px) {
         #header .search-bar form[name="search"] input[type="text"] {
           color: #000;
-          padding: 5px 10px;
+          padding: 5px 30px 5px 10px;
           width: auto;
           -webkit-transition: ease-in-out .42s all;
           transition: ease-in-out .42s all; } }
@@ -1463,16 +1468,69 @@ a:active, a:focus, button:active, button:focus, input[type="submit"]:active, inp
                 align-items: center; }
     #main #main-content #table-3 #following .content {
       margin-left: 40px; }
-    #main #main-content #table-stats .tb-row:hover {
-      background: transparent;
-      cursor: default; }
-      #main #main-content #table-stats .tb-row:hover:before {
-        display: none; }
+    #main #main-content #table-stats .tb-row {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      border: 0; }
+      #main #main-content #table-stats .tb-row:hover {
+        background: transparent;
+        cursor: default; }
+        #main #main-content #table-stats .tb-row:hover:before {
+          display: none; }
+      #main #main-content #table-stats .tb-row .row-title {
+        font-size: 16px;
+        color: #7f8c8d;
+        -ms-flex-item-align: self-start;
+            align-self: self-start; }
+      #main #main-content #table-stats .tb-row:first-child {
+        padding-bottom: 0; }
+        #main #main-content #table-stats .tb-row:first-child .row-content {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: row;
+                  flex-direction: row;
+          margin-top: 15px;
+          border-bottom: 1px solid #dee1e2;
+          padding-bottom: 20px;
+          width: 100%;
+          -webkit-box-pack: justify;
+              -ms-flex-pack: justify;
+                  justify-content: space-between; }
     #main #main-content #table-stats .table-head, #main #main-content #table-stats .table-body, #main #main-content #table-stats .table-footer {
       border-right: 0; }
     #main #main-content #table-stats .table-body {
       border-top: 1px solid #dee1e2;
       border-radius: 4px 0 0 4px; }
+    #main #main-content #table-stats .exp-chart {
+      background: #eaedf1;
+      width: 45px;
+      margin-right: 15px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: end;
+          -ms-flex-pack: end;
+              justify-content: flex-end;
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start;
+      margin-bottom: 20px;
+      position: relative; }
+      #main #main-content #table-stats .exp-chart > span {
+        position: absolute;
+        bottom: -20px;
+        left: 50%;
+        -webkit-transform: translate(-50%);
+                transform: translate(-50%); }
     #main #main-content #table-friends .tb-row:hover:before {
       background: #8e44ad; }
     #main #main-content #table-friends .table-head {
@@ -1661,6 +1719,22 @@ a:active, a:focus, button:active, button:focus, input[type="submit"]:active, inp
 @media screen and (min-width: 425px) and (orientation: portrait) {
   .user-actions {
     position: static; } }
+
+footer .alert-placeholder {
+  position: fixed;
+  bottom: 0;
+  max-width: 100%;
+  width: 100%; }
+  @media screen and (min-width: 768px) {
+    footer .alert-placeholder {
+      width: auto;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+              transform: translateX(-50%); } }
+  footer .alert-placeholder .alert {
+    margin: 10px;
+    -webkit-box-shadow: 0 1px 6px;
+            box-shadow: 0 1px 6px; }
 
 .btn-to-top {
   visibility: hidden;
