@@ -245,7 +245,7 @@
 				$( 'h4.user-name' ).show().html( newUserName );
 				$( '.brand-logo .brand-title' ).html( newUserName );
 				$( '.user-name' ).attr({'title': newUserName, 'data-original-title': newUserName});
-				localStorage.setItem("lastname", newUserName);
+				localStorage.setItem("username", newUserName);
 
 				$(this).hide();
 				$('a[href="#edit"]').show();
@@ -253,6 +253,14 @@
 			});
 		});
 
+		if (typeof(Storage) !== "undefined") {
+
+	    document.getElementById("user-name").innerHTML = localStorage.getItem("username");
+		document.getElementById("brand-title").innerHTML = localStorage.getItem("username");
+		} else {
+		    document.getElementById("user-name").innerHTML = "HOANG NGUYEN";
+			document.getElementById("brand-title").innerHTML = "HOANG NGUYEN";
+		}
 
 
 	});//if document is ready (is loaded
